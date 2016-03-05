@@ -13,27 +13,27 @@ public class StartRoundScreen extends Activity {
     public int T1_SCORE;
     public int T2_SCORE;
  */
-    private int sam;
-    private int sam2;
-    private int sam3;
-    private int sam4;
+    private int rounds;
+    private int nextTeam;
+    private int team1score;
+    private int team2score;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         setContentView(R.layout.activity_start_round_screen);
-        sam = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 21);
-        sam2 = intent.getIntExtra( TitleScreenActivity.NEXT_UP, 22);
-        sam3 = intent.getIntExtra( TitleScreenActivity.T1_SCORE, 23);
-        sam4 = intent.getIntExtra( TitleScreenActivity.T2_SCORE, 24);
+        rounds = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 21);
+        nextTeam = intent.getIntExtra( TitleScreenActivity.NEXT_UP, 22);
+        team1score = intent.getIntExtra( TitleScreenActivity.T1_SCORE, 23);
+        team2score = intent.getIntExtra( TitleScreenActivity.T2_SCORE, 24);
         TextView next = (TextView) findViewById(R.id.textView);
         TextView left = (TextView) findViewById(R.id.textView2);
         TextView score1 = (TextView) findViewById(R.id.textView3);
         TextView score2 = (TextView) findViewById(R.id.textView4);
-        next.setText("Next up: " + sam2);
-        left.setText("Rounds Left: " + sam);
-        score1.setText("Team 1: " + sam3);
-        score2.setText("Team 2: " + sam4);
+        next.setText("Next up: " + nextTeam);
+        left.setText("Rounds Left: " + rounds);
+        score1.setText("Team 1: " + team1score);
+        score2.setText("Team 2: " + team2score);
 
 
 
