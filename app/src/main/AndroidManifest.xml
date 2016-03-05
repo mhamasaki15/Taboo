@@ -47,6 +47,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.melanie.taboo.InGameActivity" />
         </activity>
+        <activity
+            android:name=".AboutPageActivity"
+            android:label="@string/title_activity_about_page"></activity>
     </application>
 
 </manifest>

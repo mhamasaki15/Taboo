@@ -62,4 +62,5 @@
     <string name="title_activity_start_round_screen">StartRoundScreen</string>
     <string name="title_activity_in_game">InGameActivity</string>
     <string name="title_activity_winner_screen">WinnerScreenActivity</string>
+    <string name="title_activity_about_page">AboutPageActivity</string>
 </resources>
