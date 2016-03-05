@@ -33,4 +33,12 @@ public class WinnerScreenActivity extends Activity {
 
     }
 
+    public void Restart()
+    {
+        Intent restart = new Intent(this, StartRoundScreen.class);
+        restart.putExtra()
+    }
+
+
+
 }

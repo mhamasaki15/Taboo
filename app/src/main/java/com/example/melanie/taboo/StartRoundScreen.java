@@ -22,10 +22,10 @@ public class StartRoundScreen extends Activity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         setContentView(R.layout.activity_start_round_screen);
-        rounds = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 21);
-        nextTeam = intent.getIntExtra( TitleScreenActivity.NEXT_UP, 22);
-        team1score = intent.getIntExtra( TitleScreenActivity.T1_SCORE, 23);
-        team2score = intent.getIntExtra( TitleScreenActivity.T2_SCORE, 24);
+        rounds = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 0);
+        nextTeam = intent.getIntExtra( TitleScreenActivity.NEXT_UP, 1);
+        team1score = intent.getIntExtra( TitleScreenActivity.T1_SCORE, 0);
+        team2score = intent.getIntExtra( TitleScreenActivity.T2_SCORE, 0);
         TextView next = (TextView) findViewById(R.id.textView);
         TextView left = (TextView) findViewById(R.id.textView2);
         TextView score1 = (TextView) findViewById(R.id.textView3);
@@ -43,12 +43,13 @@ public class StartRoundScreen extends Activity {
 
     }
 
-    /*public void RoundScreen(View view) {
+    public void RoundScreen(View view) {
         Intent send = new Intent(this, InGameActivity.class);
-        send.putExtra("T1_SCORE", T1_SCORE);
-        send.putExtra("T2_SCORE",T2_SCORE);
-        send.putExtra("ROUNDS_LEFT", ROUNDS_LEFT);
-        send.putExtra("NEXT_UP",NEXT_UP);
+        send.putExtra("T1_SCORE", team1score);
+
+        send.putExtra("T2_SCORE", team2score);
+        send.putExtra("ROUNDS_LEFT", rounds);
+        send.putExtra("NEXT_UP",nextTeam);
         startActivity(send);
 
 
@@ -59,6 +60,5 @@ public class StartRoundScreen extends Activity {
 
 
     }
-*/
 
 }
