@@ -36,11 +36,6 @@ public class StartRoundScreen extends Activity {
         score2.setText("Team 2: " + team2score);
 
 
-
-
-
-
-
     }
 
     public void RoundScreen(View view) {

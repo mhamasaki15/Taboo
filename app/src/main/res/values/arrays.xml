@@ -14,4 +14,20 @@
         <item>White People</item>
         <item>sammie2</item>
     </string-array>
+
+    <string-array name="Taboo3">
+        <item>testtest3</item>
+        <item>sammie3</item>
+    </string-array>
+
+    <string-array name="Taboo4">
+        <item>White People4</item>
+        <item>sammie4</item>
+    </string-array>
+
+    <string-array name="Taboo5">
+        <item>White People5</item>
+        <item>sammie5</item>
+    </string-array>
+
 </resources>
