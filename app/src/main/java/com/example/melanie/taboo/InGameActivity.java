@@ -37,8 +37,21 @@ public class InGameActivity extends Activity {
         words = res.getStringArray(R.array.mainWord);
         taboo1 = res.getStringArray(R.array.Taboo1);
         taboo2 = res.getStringArray(R.array.Taboo2);
-
+        /*
+        taboo3 = res.getStringArray(R.array.Taboo3);
+        taboo4 = res.getStringArray(R.array.Taboo4);
+        taboo5 = res.getStringARray(R.array.Taboo5);
+         */
         int randNum = rgenerator.nextInt(words.length);
+
+        mwText = (TextView)findViewById(R.id.main_word);
+        t1Text = (TextView)findViewById(R.id.tabooText1);
+        t2Text = (TextView)findViewById(R.id.tabooText2);
+        t3Text = (TextView)findViewById(R.id.tabooText3);
+        t4Text = (TextView)findViewById(R.id.tabooText4);
+        t5Text = (TextView)findViewById(R.id.tabooText5);
+
+        
 
         String mw = words[randNum];
 

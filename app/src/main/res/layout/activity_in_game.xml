@@ -1,26 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.melanie.taboo.InGameActivity">
+    android:orientation="vertical"
+    android:paddingTop="50dp">
 
-    <GridLayout
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:id="@+id/main_word"
+        android:text="MainWord" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:id="@+id/tabooText1"
+        android:text="Taboo1"
+        android:layout_below="@id/main_word"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:id="@+id/tabooText2"
+        android:text="Taboo2"
+        android:layout_below="@id/tabooText1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:id="@+id/tabooText3"
+        android:text="Taboo3"
+        android:layout_below="@id/tabooText2"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:id="@+id/tabooText4"
+        android:text="Taboo4"
+        android:layout_below="@id/tabooText3"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:id="@+id/tabooText5"
+        android:text="Taboo5"
+        android:layout_below="@id/tabooText4"
+        />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true">
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal"
+        android:layout_below="@id/tabooText5"
+        tools:context="com.example.melanie.taboo.TitleScreenActivity">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Team# Round# Score: Timer:"
-            android:id="@+id/textView"
-            android:layout_row="0"
-            android:layout_column="0" />
-    </GridLayout>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pass"
+            android:id="@+id/passButton" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Got It!"
+            android:onClick="sendtoRules"
+            android:id="@+id/gotItButton" />
+
+    </LinearLayout>
 </RelativeLayout>
