@@ -7,12 +7,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.melanie.taboo.AboutPageActivity">
+    tools:context="com.example.melanie.taboo.RulesPageActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="These are the badass motherfuckers who made this game"
-        />
+        android:text="jfc just google the fucking rules, it's just taboo but racist"/>
 
 </RelativeLayout>

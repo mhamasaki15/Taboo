@@ -63,4 +63,5 @@
     <string name="title_activity_in_game">InGameActivity</string>
     <string name="title_activity_winner_screen">WinnerScreenActivity</string>
     <string name="title_activity_about_page">AboutPageActivity</string>
+    <string name="title_activity_rules_page">RulesPageActivity</string>
 </resources>
