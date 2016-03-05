@@ -49,7 +49,10 @@
         </activity>
         <activity
             android:name=".AboutPageActivity"
-            android:label="@string/title_activity_about_page"></activity>
+            android:label="@string/title_activity_about_page" />
+        <activity
+            android:name=".RulesPageActivity"
+            android:label="@string/title_activity_rules_page"></activity>
     </application>
 
 </manifest>
