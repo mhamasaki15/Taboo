@@ -41,7 +41,6 @@ public class StartRoundScreen extends Activity {
     public void RoundScreen(View view) {
         Intent send = new Intent(this, InGameActivity.class);
         send.putExtra("T1_SCORE", team1score);
-
         send.putExtra("T2_SCORE", team2score);
         send.putExtra("ROUNDS_LEFT", rounds);
         send.putExtra("NEXT_UP",nextTeam);
