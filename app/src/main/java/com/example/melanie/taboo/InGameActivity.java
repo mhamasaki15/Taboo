@@ -23,7 +23,6 @@ public class InGameActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_game);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         roundsLeft = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 21);

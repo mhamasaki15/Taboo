@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-public class WinnerScreenActivity extends Activity {
+/* public class WinnerScreenActivity extends Activity {
 
     @Override
     public int score1;
@@ -36,9 +36,10 @@ public class WinnerScreenActivity extends Activity {
     public void Restart()
     {
         Intent restart = new Intent(this, StartRoundScreen.class);
-        restart.putExtra()
+        restart.putExtra();
     }
 
 
 
 }
+*/
