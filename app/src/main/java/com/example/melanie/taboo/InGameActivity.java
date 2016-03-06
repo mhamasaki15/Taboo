@@ -70,7 +70,7 @@ public class InGameActivity extends Activity {
         t4Text = (TextView)findViewById(R.id.tabooText4);
         t5Text = (TextView)findViewById(R.id.tabooText5);
 
-        mwText.setText("" + time); //
+        mwText.setText(words[randNum]); //
         t1Text.setText(taboo1[randNum]);
         t2Text.setText(taboo2[randNum]);
         t3Text.setText(taboo3[randNum]);
@@ -79,7 +79,7 @@ public class InGameActivity extends Activity {
 
         startTime = (System.currentTimeMillis() / 1000.0);
 
-        new CountDownTimer((time*1000 + 2000), 1000)
+        new CountDownTimer((time*1000 + 1100), 1000)
         {
             public void onTick(long millisUntilFinished)
             {
@@ -104,8 +104,6 @@ public class InGameActivity extends Activity {
             hsr_score = score1;
             hsr_team = 1;
             hsr_round = roundsLeft;
-
-
         }
         if (roundsLeft == 1) {
             Intent doneData = new Intent(this, WinnerScreenActivity.class);
@@ -154,12 +152,26 @@ public class InGameActivity extends Activity {
         t3Text.setText(taboo3[randNum]);
         t4Text.setText(taboo4[randNum]);
         t5Text.setText(taboo5[randNum]);
+        if (teamNum ==  1){
+            pass_count1++;
+            score1--;
+        }
+        else{
+            pass_count2++;
+            score2--;
+        }
         startTime = System.currentTimeMillis()/1000.0;
     }
 
     public void correctWord(View view) {
-        if (teamNum == 2) score2++;
-        else score1++;
+        if (teamNum == 2){
+            correct_count2++;
+            score2+=2;
+        }
+        else{
+            correct_count1++;
+            score1+=2;
+        }
         endTime = System.currentTimeMillis() / 1000.0;
         double temp = endTime - startTime;
         if (temp < sw_time) {
@@ -180,24 +192,4 @@ public class InGameActivity extends Activity {
         t4Text.setText(taboo4[randNum]);
         t5Text.setText(taboo5[randNum]);
     }
-
-   /* public void Statistics(View view)
-    {
-        Intent send_stats = new Intent(this, WinnerScreenActivity.class);
-        send_stats.putExtra(TitleScreenActivity.SW_TIME, sw_time);
-        send_stats.putExtra(TitleScreenActivity.SW_TEAM,sw_team);
-        send_stats.putExtra(TitleScreenActivity.SW_WORD,sw_word);
-        send_stats.putExtra(TitleScreenActivity.LW_TIME, lw_time);
-        send_stats.putExtra(TitleScreenActivity.LW_TEAM, lw_team);
-        send_stats.putExtra(TitleScreenActivity.LW_WORD, lw_word);
-        send_stats.putExtra(TitleScreenActivity.HSR_TEAM, hsr_team);
-        send_stats.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
-        send_stats.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
-        startActivity(send_stats);
-
-
-    }
-    */
-    //make a passing timer/set number of pass
-
 }
