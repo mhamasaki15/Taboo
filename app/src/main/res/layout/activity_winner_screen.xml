@@ -7,45 +7,64 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#05B198"
     tools:context="com.example.melanie.taboo.WinnerScreenActivity">
 
     <TextView
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:text="WINNER IS: "
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:textSize="50dp"
         android:id="@+id/textView5"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp" />
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="75dp"
-        android:text="Play Again"
-        android:id="@+id/button2"
-        android:onClick="Restart"
-        android:layout_alignParentBottom="true"
+    <ImageView
+        android:layout_below="@id/textView5"
+        android:id="@+id/trophyimage"
+        android:layout_width="700dp"
+        android:layout_above="@id/statistics"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="116dp" />
+        android:layout_height="700dp"
+
+        android:src="@mipmap/trophy"/>
 
     <Button
         android:layout_width="300dp"
-        android:layout_height="75dp"
-        android:text="nah"
-        android:id="@+id/nah"
-        android:onClick="nah"
-        android:layout_marginBottom="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2" />
-
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:text="Statistics"
+        android:background="#FEC803"
         android:id="@+id/statistics"
         android:onClick="stats"
         android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Play Again"
+        android:background="@android:color/holo_green_light"
+        android:id="@+id/button2"
+        android:layout_marginTop="10dp"
+        android:onClick="Restart"
+        android:layout_above="@id/nah"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="nah"
+        android:background="#C2185B"
+        android:id="@+id/nah"
+        android:layout_marginTop="10dp"
+        android:onClick="nah"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
+
+
 </RelativeLayout>
