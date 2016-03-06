@@ -1,33 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <integer-array name="firstIndices">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+    </integer-array>
     <string-array name="mainWord">
-        <item>Connecticut</item>
-        <item>Face Swap</item>
+        <item>Basic1</item>
+        <item>Basic2</item>
+        <item>Basic3</item>
+        <item>Basic4</item>
+        <item>Basic5</item>
+        <item>Basic6</item>
+        <item>Basic7</item>
+        <item>Basic8</item>
+        <item>Basic9</item>
+        <item>Basic10</item>
+        <item>USC1</item>
+        <item>USC2</item>
+        <item>USC3</item>
+        <item>USC4</item>
+        <item>USC5</item>
+        <item>USC6</item>
+        <item>USC7</item>
+        <item>USC8</item>
+        <item>USC9</item>
+        <item>USC10</item>
+        <item>Pop1</item>
+        <item>Pop2</item>
+        <item>Pop3</item>
+        <item>Pop4</item>
+        <item>Pop5</item>
+        <item>Pop6</item>
+        <item>Pop7</item>
+        <item>Pop8</item>
+        <item>Pop9</item>
+        <item>Pop10</item>
     </string-array>
 
     <string-array name="Taboo1">
-        <item>State</item>
-        <item>sammie1</item>
+        <item>Basic1</item>
+        <item>Basic2</item>
+        <item>Basic3</item>
+        <item>Basic4</item>
+        <item>Basic5</item>
+        <item>Basic6</item>
+        <item>Basic7</item>
+        <item>Basic8</item>
+        <item>Basic9</item>
+        <item>Basic10</item>
+        <item>USC1</item>
+        <item>USC2</item>
+        <item>USC3</item>
+        <item>USC4</item>
+        <item>USC5</item>
+        <item>USC6</item>
+        <item>USC7</item>
+        <item>USC8</item>
+        <item>USC9</item>
+        <item>USC10</item>
+        <item>Pop1</item>
+        <item>Pop2</item>
+        <item>Pop3</item>
+        <item>Pop4</item>
+        <item>Pop5</item>
+        <item>Pop6</item>
+        <item>Pop7</item>
+        <item>Pop8</item>
+        <item>Pop9</item>
+        <item>Pop10</item>
     </string-array>
 
     <string-array name="Taboo2">
-        <item>White People</item>
-        <item>sammie2</item>
+        <item>Basic1</item>
+        <item>Basic2</item>
+        <item>Basic3</item>
+        <item>Basic4</item>
+        <item>Basic5</item>
+        <item>Basic6</item>
+        <item>Basic7</item>
+        <item>Basic8</item>
+        <item>Basic9</item>
+        <item>Basic10</item>
+        <item>USC1</item>
+        <item>USC2</item>
+        <item>USC3</item>
+        <item>USC4</item>
+        <item>USC5</item>
+        <item>USC6</item>
+        <item>USC7</item>
+        <item>USC8</item>
+        <item>USC9</item>
+        <item>USC10</item>
+        <item>Pop1</item>
+        <item>Pop2</item>
+        <item>Pop3</item>
+        <item>Pop4</item>
+        <item>Pop5</item>
+        <item>Pop6</item>
+        <item>Pop7</item>
+        <item>Pop8</item>
+        <item>Pop9</item>
+        <item>Pop10</item>
     </string-array>
 
     <string-array name="Taboo3">
-        <item>testtest3</item>
-        <item>sammie3</item>
+        <item>Basic1</item>
+        <item>Basic2</item>
+        <item>Basic3</item>
+        <item>Basic4</item>
+        <item>Basic5</item>
+        <item>Basic6</item>
+        <item>Basic7</item>
+        <item>Basic8</item>
+        <item>Basic9</item>
+        <item>Basic10</item>
+        <item>USC1</item>
+        <item>USC2</item>
+        <item>USC3</item>
+        <item>USC4</item>
+        <item>USC5</item>
+        <item>USC6</item>
+        <item>USC7</item>
+        <item>USC8</item>
+        <item>USC9</item>
+        <item>USC10</item>
+        <item>Pop1</item>
+        <item>Pop2</item>
+        <item>Pop3</item>
+        <item>Pop4</item>
+        <item>Pop5</item>
+        <item>Pop6</item>
+        <item>Pop7</item>
+        <item>Pop8</item>
+        <item>Pop9</item>
+        <item>Pop10</item>
     </string-array>
 
     <string-array name="Taboo4">
-        <item>White People4</item>
-        <item>sammie4</item>
+        <item>Basic1</item>
+        <item>Basic2</item>
+        <item>Basic3</item>
+        <item>Basic4</item>
+        <item>Basic5</item>
+        <item>Basic6</item>
+        <item>Basic7</item>
+        <item>Basic8</item>
+        <item>Basic9</item>
+        <item>Basic10</item>
+        <item>USC1</item>
+        <item>USC2</item>
+        <item>USC3</item>
+        <item>USC4</item>
+        <item>USC5</item>
+        <item>USC6</item>
+        <item>USC7</item>
+        <item>USC8</item>
+        <item>USC9</item>
+        <item>USC10</item>
+        <item>Pop1</item>
+        <item>Pop2</item>
+        <item>Pop3</item>
+        <item>Pop4</item>
+        <item>Pop5</item>
+        <item>Pop6</item>
+        <item>Pop7</item>
+        <item>Pop8</item>
+        <item>Pop9</item>
+        <item>Pop10</item>
     </string-array>
 
     <string-array name="Taboo5">
-        <item>White People5</item>
-        <item>sammie5</item>
+        <item>Basic1</item>
+        <item>Basic2</item>
+        <item>Basic3</item>
+        <item>Basic4</item>
+        <item>Basic5</item>
+        <item>Basic6</item>
+        <item>Basic7</item>
+        <item>Basic8</item>
+        <item>Basic9</item>
+        <item>Basic10</item>
+        <item>USC1</item>
+        <item>USC2</item>
+        <item>USC3</item>
+        <item>USC4</item>
+        <item>USC5</item>
+        <item>USC6</item>
+        <item>USC7</item>
+        <item>USC8</item>
+        <item>USC9</item>
+        <item>USC10</item>
+        <item>Pop1</item>
+        <item>Pop2</item>
+        <item>Pop3</item>
+        <item>Pop4</item>
+        <item>Pop5</item>
+        <item>Pop6</item>
+        <item>Pop7</item>
+        <item>Pop8</item>
+        <item>Pop9</item>
+        <item>Pop10</item>
     </string-array>
 
     <string-array name="stats_array">
@@ -46,11 +219,9 @@
         <item> 10 </item>
     </string-array>
     <string-array name = "time_array">
-        <item> 10 </item>
-        <item> 20 </item>
         <item> 30 </item>
-        <item> 40 </item>
-        <item> 50 </item>
         <item> 60 </item>
+        <item> 90 </item>
+        <item> 120 </item>
     </string-array>
 </resources>

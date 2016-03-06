@@ -13,21 +13,21 @@ public class TitleScreenActivity extends AppCompatActivity {
     public static final String T2_SCORE = "2";
     public static final String ROUNDS_LEFT= "6";
     public static final String SW_WORD = "3";
-    public static final String SW_TEAM = "9";
     public static final String SW_TIME = "10";
     public static final String LW_WORD = "11";
-    public static final String LW_TEAM = "12";
     public static final String LW_TIME = "13";
     public static final String HSR_SCORE = "14";
     public static final String HSR_TEAM = "15";
     public static final String HSR_ROUND = "16";
-    public static final String NAME1 = "1";
-    public static final String NAME2 = "2";
-    public static final String Time = "60";
-    public static final String PASS_ARRAY = "33";
-    public static final String PASS_COUNT = "34";
-    public static final String CORRECT_COUNT = "35";
-
+    public static final String NAME1 = "17";
+    public static final String NAME2 = "18";
+    public static final String TIME = "60";
+    public static final String PASS_COUNT1 = "34";
+    public static final String CORRECT_COUNT1 = "35";
+    public static final String PASS_COUNT2 = "36";
+    public static final String CORRECT_COUNT2 = "37";
+    public static final String INDICES = "41";
+    public static final String PASS_LIST = "42";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,40 +47,7 @@ public class TitleScreenActivity extends AppCompatActivity {
     }
 
     public void sendtoSettingsActivity(View view){
-         Intent intent = new Intent(this, SettingsActivity.class);
-        int roundsLeft= 6;
-        intent.putExtra(ROUNDS_LEFT, roundsLeft);
-        int team = 1;
-        intent.putExtra(NEXT_UP, team);
-        int team1Score = 0;
-        intent.putExtra(T1_SCORE, team1Score);
-        int team2Score = 0;
-        double short_time = 61.0;
-        double long_time = 0.0;
-        double time = 60.0;
-        int sw_team = 1;
-        int long_team = 1;
-        int hsr_team = 0;
-        String word = "";
-        String long_word = "";
-        int high_round = 9;
-        int high_score = 0;
-        String name1 = "1", name2 = "2";
-
-        intent.putExtra(T2_SCORE, team2Score);
-        intent.putExtra(SW_WORD,word );
-        intent.putExtra(LW_WORD,long_word);
-        intent.putExtra(SW_TEAM,sw_team);
-        intent.putExtra(LW_TEAM,long_team);
-        intent.putExtra(HSR_TEAM, hsr_team);
-        intent.putExtra(SW_TIME,short_time);
-        intent.putExtra(LW_TIME, long_time);
-        intent.putExtra(HSR_SCORE, high_score);
-        intent.putExtra(HSR_ROUND,high_round);
-        intent.putExtra(NAME1,name1);
-        intent.putExtra(NAME2,name2);
-        intent.putExtra(Time,time );
-
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 }
