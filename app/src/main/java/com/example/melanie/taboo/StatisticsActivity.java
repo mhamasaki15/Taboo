@@ -16,7 +16,7 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
 
     private double sw_time, lw_time;
     private String sw_word, lw_word;
-    private int sw_team, lw_team, hsr_score, hsr_team, hsr_round, pass_count, correct_count;
+    private int sw_team, lw_team, hsr_score, hsr_team, hsr_round, pass_count1, correct_count1, pass_count2, correct_count2;
 
     private ArrayAdapter myArrayAdapter;
     private ListView myListView;
@@ -43,8 +43,10 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
         hsr_round = intent.getIntExtra(TitleScreenActivity.HSR_ROUND, 1);
         hsr_team = intent.getIntExtra(TitleScreenActivity.HSR_TEAM, 1);
-        pass_count = intent.getIntExtra(TitleScreenActivity.PASS_COUNT, 0);
-        correct_count = intent.getIntExtra(TitleScreenActivity.PASS_COUNT, 0);
+        pass_count1 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT1, 0);
+        correct_count1 = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT1, 0);
+        pass_count2 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT2, 0);
+        correct_count2 = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT2, 0);
 
         myListView = (ListView)findViewById(R.id.passedList);
         //Bundle b = intent.getBundleExtra(TitleScreenActivity.PASS_ARRAY);
@@ -65,6 +67,7 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        myListView.setVisibility(View.INVISIBLE);
         if (pos == 0){
             text1.setText("The fastest guessed word was...");
             text2.setText(sw_word + "\n");
@@ -88,13 +91,15 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
             text2.setText("");
             text3.setText("");
             text4.setText("");
-            myListView.setVisibility(View.INVISIBLE);
+            myListView.setVisibility(View.VISIBLE);
         }
         else if (pos == 4){
-            text1.setText("Team " + "teamPlaceHolder:\n");
-            text2.setText("percentage placeholder" + "%\n");
+            double t1P = (double)correct_count1/(pass_count1+correct_count1);
+            text1.setText("Team " + ":");
+            text2.setText(String.valueOf(t1P) + "%\n");
+            double t2P = (double)correct_count2/(pass_count2+correct_count2);
             text3.setText("Team " + "teamPlaceHolder:");
-            text4.setText("percentage placeholder" + "%\n");
+            text4.setText(String.valueOf(t2P) + "%\n");
 
         }
         // An item was selected. You can retrieve the selected item using

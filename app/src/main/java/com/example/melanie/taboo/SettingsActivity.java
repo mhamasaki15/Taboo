@@ -78,6 +78,7 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
 
         }
         else{
+            time = 7;
             if(pos == 0)
             {
                 time = 10;
