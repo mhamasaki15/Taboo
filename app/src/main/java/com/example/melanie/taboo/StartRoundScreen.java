@@ -28,6 +28,9 @@ public class StartRoundScreen extends Activity {
     private  int HSR_TEAM;
     private  int HSR_ROUND;
 
+    private int pass_count;
+    private int correct_count;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +46,11 @@ public class StartRoundScreen extends Activity {
         LW_WORD = intent.getStringExtra(TitleScreenActivity.LW_WORD);
         LW_TIME = intent.getDoubleExtra(TitleScreenActivity.LW_TIME, 0.0);
         LW_TEAM = intent.getIntExtra(TitleScreenActivity.LW_TEAM, 0);
-        HSR_SCORE = intent.getIntExtra(TitleScreenActivity.HSR_SCORE,0);
+        HSR_SCORE = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 0);
         HSR_TEAM = intent.getIntExtra(TitleScreenActivity.HSR_TEAM,0);
         HSR_ROUND = intent.getIntExtra(TitleScreenActivity.HSR_ROUND,0);
+        correct_count = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT, 0);
+        pass_count = intent.getIntExtra(TitleScreenActivity.PASS_COUNT, 0);
         TextView next = (TextView) findViewById(R.id.next);
         TextView left = (TextView) findViewById(R.id.rounds);
         TextView score1 = (TextView) findViewById(R.id.score1);
@@ -76,6 +81,9 @@ public class StartRoundScreen extends Activity {
         send.putExtra(TitleScreenActivity.HSR_TEAM,HSR_TEAM);
         send.putExtra(TitleScreenActivity.HSR_ROUND,HSR_ROUND);
 
+        send.putExtra(TitleScreenActivity.PASS_COUNT, pass_count);
+        send.putExtra(TitleScreenActivity.CORRECT_COUNT, correct_count);
+
         startActivity(send);
 
 
@@ -85,7 +93,7 @@ public class StartRoundScreen extends Activity {
     {
 
         Intent send = new Intent(this, TitleScreenActivity.class);
-
+/*
         send.putExtra(TitleScreenActivity.T1_SCORE, team1score);
         send.putExtra(TitleScreenActivity.T2_SCORE, team2score);
         send.putExtra(TitleScreenActivity.ROUNDS_LEFT, rounds);
@@ -99,7 +107,7 @@ public class StartRoundScreen extends Activity {
         send.putExtra(TitleScreenActivity.HSR_SCORE,HSR_SCORE);
         send.putExtra(TitleScreenActivity.HSR_TEAM,HSR_TEAM);
         send.putExtra(TitleScreenActivity.HSR_ROUND,HSR_ROUND);
-
+*/
         startActivity(send);
 
 
