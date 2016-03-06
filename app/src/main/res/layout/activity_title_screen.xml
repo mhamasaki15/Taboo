@@ -42,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="About"
+        android:layout_marginRight="10dp"
         android:textSize="20dp"
         android:background="#F3CE41"
         android:id="@+id/aboutButton"
