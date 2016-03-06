@@ -7,11 +7,122 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#05B198"
     tools:context="com.example.melanie.taboo.RulesPageActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="jfc just google the fucking rules, it's just taboo but racist"/>
+        android:text="RULES"
+        android:textSize="50dp"
+        android:id="@+id/rules"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"/>
+    <TextView android:id="@+id/toprule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60 seconds to help your teammate guess the word."
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/rules"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+    <TextView android:id="@+id/timerex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="60dp"
+        android:text="60"
+        android:layout_below="@+id/toprule"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"/>
+
+    <LinearLayout android:id = "@+id/cardrule"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timerex"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:background="#7fc7af"
+        android:orientation="vertical">
+        <TextView android:id="@+id/wordguess"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Word to Guess"
+            android:textAlignment="center"
+            android:background="#fec803"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            android:text="Be Careful!"
+            android:textAlignment="center"
+
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            android:text="If you say the TABOO words, you HAVE to pass."
+            android:textAlignment="center"
+
+            android:textStyle="bold"/>
+    </LinearLayout>
+        <LinearLayout android:id="@+id/buttons"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/cardrule"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="PASS"
+            />
+         <Button
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:textSize="30dp"
+             android:layout_height="wrap_content"
+             android:text = "Got it!"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Pass will cost you 1 point"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+
+            android:layout_height="wrap_content"
+            android:text="Got it? Get 2 points :)"
+            android:textSize="25dp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
 
 </RelativeLayout>
