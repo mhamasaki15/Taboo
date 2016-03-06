@@ -58,7 +58,7 @@ public class InGameActivity extends Activity {
         t3Text.setText(taboo3[randNum]);
         t4Text.setText(taboo4[randNum]);
         t5Text.setText(taboo5[randNum]);
-        new CountDownTimer(600000,10000)
+        new CountDownTimer(600000,1000)
         {
             public void onTick(long millisUntilFinished)
             {
