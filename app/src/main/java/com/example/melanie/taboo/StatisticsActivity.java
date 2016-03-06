@@ -54,16 +54,32 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         if (pos == 0){
-            text1.setText(R.string.fastestguess1);
-            text2.setText(sw_word);
-            text3.setText(R.string.team + "teamPlaceholder" + R.string.guessed);
-            text4.setText(String.valueOf(sw_time) + R.string.seconds);
+            text1.setText("The fastest guessed word was...");
+            text2.setText(sw_word + "\n");
+            text3.setText("Team " + "teamPlaceholder" + " guessed it in\n");
+            text4.setText(String.valueOf(sw_time) + " seconds");
         }
         else if (pos == 1){
-            text1.setText(R.string.slowestguess1);
-            text2.setText(lw_word);
-            text3.setText(R.string.team + "teamPlaceHolder" + R.string.guessed);
-            text4.setText(String.valueOf(lw_time) + R.string.seconds);
+            text1.setText("The slowest guessed word was...");
+            text2.setText(lw_word + "\n");
+            text3.setText("Team " + "teamPlaceHolder" + " guessed it in\n");
+            text4.setText(String.valueOf(lw_time) + "seconds");
+        }
+        else if (pos == 2){
+            text1.setText("Team " + "teamPlaceHolder\n");
+            text2.setText("had the highest scoring round with\n");
+            text3.setText("");
+            text4.setText("" + hsr_score + " points");
+        }
+        else if (pos == 3){
+            //passed words
+        }
+        else if (pos == 4){
+            text1.setText("Team " + "teamPlaceHolder:\n");
+            text2.setText("percentage placeholder" + "%\n");
+            text3.setText("Team " + "teamPlaceHolder:");
+            text4.setText("percentage placeholder" + "%\n");
+
         }
         // An item was selected. You can retrieve the selected item using
         // parent.getItemAtPosition(pos)

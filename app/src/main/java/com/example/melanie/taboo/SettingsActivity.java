@@ -108,8 +108,8 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
     {
         Intent ret = new Intent(this, StartRoundScreen.class);
         ret.putExtra(TitleScreenActivity.ROUNDS_LEFT,rounds);
-        ret.putExtra(TitleScreenActivity.NAME1, team1);
-        ret.putExtra(TitleScreenActivity.NAME2, team2);
+        //ret.putExtra(TitleScreenActivity.NAME1, team1);
+        //ret.putExtra(TitleScreenActivity.NAME2, team2);
         startActivity(ret);
 
 
