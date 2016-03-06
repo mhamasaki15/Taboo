@@ -40,7 +40,7 @@ public class TitleScreenActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void sendtoStartRoundScreen(View view){
+    public void sendtoSettingsActivity(View view){
         Intent intent = new Intent(this, StartRoundScreen.class);
         int roundsLeft= 6;
         intent.putExtra(ROUNDS_LEFT, roundsLeft);
@@ -71,10 +71,5 @@ public class TitleScreenActivity extends AppCompatActivity {
         intent.putExtra(HSR_ROUND,high_round);
 
         startActivity(intent);
-    }
-    public void sendtoSettingActivity(View view)
-    {
-        Intent send = new Intent(this, SettingsActivity.class);
-        startActivity(send);
     }
 }
