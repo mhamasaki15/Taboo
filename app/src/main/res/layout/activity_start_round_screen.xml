@@ -7,35 +7,47 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-
+    android:background="#05B198"
     tools:context="com.example.melanie.taboo.StartRoundScreen">
 
 <Button
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:text="START ROUND"
+        android:textSize="30dp"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="167dp"
-        android:onClick="RoundScreen"/>
+        android:onClick="RoundScreen"
+        android:background="@android:color/holo_green_light"
+    />
 
 
 
     <TextView
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:id="@+id/rounds"
         android:textSize="30sp"
         android:text="Rounds Left: "
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp" />
     <TextView
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
+<<<<<<< HEAD
         android:text="Next Up: "
         android:id="@+id/next"
+=======
+        android:text="Get Ready Team "
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:id="@+id/textView"
+>>>>>>> origin/master
         android:textSize="30sp"
         android:layout_below="@+id/rounds"
         android:layout_centerHorizontal="true" />
@@ -46,6 +58,7 @@
     android:id="@+id/teamnames"
     android:layout_below="@id/next"
     android:orientation="horizontal"
+    
     android:layout_centerHorizontal="true">
 
     <LinearLayout
@@ -58,6 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TEAM 1"
+        android:textColor="@android:color/holo_blue_bright"
         android:paddingRight="30dp"
         android:textSize="30sp"
         android:id="@+id/team1name"
@@ -67,8 +81,14 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="Score 1"
+<<<<<<< HEAD
             android:textSize="30sp"
             android:id="@+id/score1"
+=======
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            android:id="@+id/textView3"
+>>>>>>> origin/master
             android:layout_below="@+id/team1name"
             />
         </LinearLayout>
@@ -81,6 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TEAM 2"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="30sp"
         android:id="@+id/team2name"
          />
@@ -88,8 +109,14 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:text="Score 2"
+<<<<<<< HEAD
         android:textSize="30sp"
         android:id="@+id/score2"
+=======
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        android:id="@+id/textView4"
+>>>>>>> origin/master
         android:layout_below="@+id/team2name"
         />
 </LinearLayout>
