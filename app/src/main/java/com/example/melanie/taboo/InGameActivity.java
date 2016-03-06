@@ -5,14 +5,17 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.os.CountDownTimer;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.Random;
 
 public class InGameActivity extends Activity {
 
     private String[] words, taboo1, taboo2, taboo3, taboo4, taboo5;
-    private TextView mwText, t1Text, t2Text, t3Text, t4Text, t5Text;
+    private TextView mwText, t1Text, t2Text, t3Text, t4Text, t5Text,timer;
 
     private Resources res;
     private int roundsLeft, teamNum, score1, score2;
@@ -23,6 +26,7 @@ public class InGameActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_game);
+        timer = (TextView) findViewById(R.id.textView6);
 
         Intent intent = getIntent();
         roundsLeft = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 21);
@@ -54,6 +58,18 @@ public class InGameActivity extends Activity {
         t3Text.setText(taboo3[randNum]);
         t4Text.setText(taboo4[randNum]);
         t5Text.setText(taboo5[randNum]);
+        new CountDownTimer(600000,10000)
+        {
+            public void onTick(long millisUntilFinished)
+            {
+                timer.setText(""+millisUntilFinished / 1000);
+            }
+            public void onFinish()
+            {
+                roundOver(null);
+            }
+        }.start();
+
     }
 
     public void roundOver(View view){
