@@ -20,7 +20,7 @@ public class InGameActivity extends Activity {
 
     private double startTime, endTime;
     private double sw_time, lw_time;
-    private String sw_word, lw_word;
+    private String sw_word, lw_word, name1,name2;
     private int sw_team, lw_team, hsr_score, hsr_team, hsr_round,time;
 
     private Resources res;
@@ -45,6 +45,9 @@ public class InGameActivity extends Activity {
         hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
         hsr_round = intent.getIntExtra(TitleScreenActivity.HSR_ROUND, 1);
         hsr_team = intent.getIntExtra(TitleScreenActivity.HSR_TEAM, 1);
+        name1 = intent.getStringExtra(TitleScreenActivity.NAME1);
+        name2 = intent.getStringExtra(TitleScreenActivity.NAME2);
+
 
         roundsLeft = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 21);
         teamNum = intent.getIntExtra(TitleScreenActivity.NEXT_UP, 22);
@@ -78,7 +81,7 @@ public class InGameActivity extends Activity {
 
         startTime = (System.currentTimeMillis() / 1000.0);
 
-        new CountDownTimer((time*1000 + 2000),1000)
+        new CountDownTimer((time*10000 + 2000),1000)
         {
             public void onTick(long millisUntilFinished)
             {
@@ -120,6 +123,9 @@ public class InGameActivity extends Activity {
             doneData.putExtra(TitleScreenActivity.LW_TIME, lw_time);
             doneData.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
             doneData.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
+            doneData.putExtra(TitleScreenActivity.NAME1,name1);
+            doneData.putExtra(TitleScreenActivity.NAME2,name2);
+
 
 
             startActivity(doneData);
@@ -140,6 +146,8 @@ public class InGameActivity extends Activity {
             sendData.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
             sendData.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
             sendData.putExtra(TitleScreenActivity.HSR_TEAM, hsr_team);
+            sendData.putExtra(TitleScreenActivity.NAME1,name1);
+            sendData.putExtra(TitleScreenActivity.NAME2,name2);
 
             startActivity(sendData);
         }
@@ -194,6 +202,8 @@ public class InGameActivity extends Activity {
         send_stats.putExtra(TitleScreenActivity.HSR_TEAM, hsr_team);
         send_stats.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
         send_stats.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
+        send_stats.putExtra(TitleScreenActivity.NAME1, name1);
+        send_stats.putExtra(TitleScreenActivity.NAME2,name2);
         startActivity(send_stats);
 
 

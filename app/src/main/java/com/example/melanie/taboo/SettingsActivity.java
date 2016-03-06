@@ -25,6 +25,8 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         Intent setting = getIntent();
         Spinner spinner = (Spinner) findViewById(R.id.RoundSelect);
         Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+        spinner.setOnItemSelectedListener(this);
+        spinner2.setOnItemSelectedListener(this);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rounds_array, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.time_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -51,8 +53,7 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
     {
-        int sammie = parent.getId();
-        if (sammie == R.id.RoundSelect){
+        if(id == R.id.RoundSelect)
             if(pos == 0)
             {
                 rounds = 2;
@@ -73,12 +74,11 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
             {
                 rounds = 10;
             }
-
-        }
-        else{
+        else
+        {
             if(pos == 0)
             {
-                time = 10;
+                time = pos;
             }
             else if(pos == 1)
             {
@@ -92,14 +92,19 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
             {
                 time = 40;
             }
-            else
+            else if(pos == 4)
             {
                 time = 50;
             }
-
+            else if(pos == 5)
+            {
+                time = 60;
+            }
         }
 
+
     }
+
     public void onNothingSelected(AdapterView<?> parent)
     {
 
@@ -121,7 +126,7 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         int high_score = 0;
         int team1Score = 0;
         Intent ret = new Intent(this, StartRoundScreen.class);
-        ret.putExtra(TitleScreenActivity.ROUNDS_LEFT,rounds);
+        ret.putExtra(TitleScreenActivity.ROUNDS_LEFT, rounds);
         ret.putExtra(TitleScreenActivity.NAME1, team1);
         ret.putExtra(TitleScreenActivity.NAME2, team2);
         ret.putExtra(TitleScreenActivity.T2_SCORE, team2Score);
