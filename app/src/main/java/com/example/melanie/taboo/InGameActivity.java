@@ -11,16 +11,20 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class InGameActivity extends Activity {
 
     private String[] words, taboo1, taboo2, taboo3, taboo4, taboo5;
+    private ArrayList<Integer> validIndices;
+    private int index;
+    private ArrayList<String> passList;
     private TextView mwText, t1Text, t2Text, t3Text, t4Text, t5Text,timer;
 
     private double startTime, endTime;
     private double sw_time, lw_time;
-    private String sw_word, lw_word;
+    private String sw_word, lw_word, name1, name2;
     private int hsr_score, hsr_team, hsr_round, time, pass_count1, pass_count2, correct_count1, correct_count2;
 
     private Resources res;
@@ -35,7 +39,8 @@ public class InGameActivity extends Activity {
         timer = (TextView) findViewById(R.id.textView6);
 
         Intent intent = getIntent();
-
+        passList = intent.getStringArrayListExtra(TitleScreenActivity.PASS_LIST);
+        validIndices = intent.getIntegerArrayListExtra(TitleScreenActivity.INDICES);
         sw_time = intent.getDoubleExtra(TitleScreenActivity.SW_TIME, 1.0);
         lw_time = intent.getDoubleExtra(TitleScreenActivity.LW_TIME, 1.0);
         sw_word = intent.getStringExtra(TitleScreenActivity.SW_WORD);
@@ -52,6 +57,8 @@ public class InGameActivity extends Activity {
         correct_count2 = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT2, 0);
         pass_count1 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT1, 0);
         pass_count2 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT2, 0);
+        name1 = intent.getStringExtra(TitleScreenActivity.NAME1);
+        name2 = intent.getStringExtra(TitleScreenActivity.NAME2);
 
         res = getResources();
         words = res.getStringArray(R.array.mainWord);
@@ -61,7 +68,9 @@ public class InGameActivity extends Activity {
         taboo4 = res.getStringArray(R.array.Taboo4);
         taboo5 = res.getStringArray(R.array.Taboo5);
 
-        randNum = rgenerator.nextInt(words.length);
+        randNum = rgenerator.nextInt(validIndices.size());
+        index = validIndices.get(randNum);
+        validIndices.remove(randNum);
 
         mwText = (TextView)findViewById(R.id.main_word);
         t1Text = (TextView)findViewById(R.id.tabooText1);
@@ -70,20 +79,24 @@ public class InGameActivity extends Activity {
         t4Text = (TextView)findViewById(R.id.tabooText4);
         t5Text = (TextView)findViewById(R.id.tabooText5);
 
-        mwText.setText(words[randNum]); //
-        t1Text.setText(taboo1[randNum]);
-        t2Text.setText(taboo2[randNum]);
-        t3Text.setText(taboo3[randNum]);
-        t4Text.setText(taboo4[randNum]);
-        t5Text.setText(taboo5[randNum]);
+        mwText.setText(words[index]); //
+        t1Text.setText(taboo1[index]);
+        t2Text.setText(taboo2[index]);
+        t3Text.setText(taboo3[index]);
+        t4Text.setText(taboo4[index]);
+        t5Text.setText(taboo5[index]);
 
         startTime = (System.currentTimeMillis() / 1000.0);
 
+<<<<<<< HEAD
         new CountDownTimer((time + 1100), 1000)
+=======
+        new CountDownTimer((time*1000 + 2500), 1000)
+>>>>>>> origin/master
         {
             public void onTick(long millisUntilFinished)
             {
-                timer.setText(""+ (millisUntilFinished / 1000 - 2));
+                timer.setText(""+ (millisUntilFinished / 1000 - 1));
             }
             public void onFinish()
             {
@@ -120,6 +133,9 @@ public class InGameActivity extends Activity {
             doneData.putExtra(TitleScreenActivity.CORRECT_COUNT2, correct_count2);
             doneData.putExtra(TitleScreenActivity.PASS_COUNT1, pass_count1);
             doneData.putExtra(TitleScreenActivity.PASS_COUNT2, pass_count2);
+            doneData.putExtra(TitleScreenActivity.NAME1, name1);
+            doneData.putExtra(TitleScreenActivity.NAME2, name2);
+            doneData.putStringArrayListExtra(TitleScreenActivity.PASS_LIST, passList);
 
             startActivity(doneData);
         }
@@ -139,19 +155,27 @@ public class InGameActivity extends Activity {
             sendData.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
             sendData.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
             sendData.putExtra(TitleScreenActivity.HSR_TEAM, hsr_team);
+            sendData.putExtra(TitleScreenActivity.NAME1, name1);
+            sendData.putExtra(TitleScreenActivity.NAME2, name2);
+            sendData.putIntegerArrayListExtra(TitleScreenActivity.INDICES, validIndices);
+            sendData.putStringArrayListExtra(TitleScreenActivity.PASS_LIST, passList);
+
 
             startActivity(sendData);
         }
     }
 
     public void passWord(View view){
-        randNum = rgenerator.nextInt(words.length);
-        mwText.setText(words[randNum]);
-        t1Text.setText(taboo1[randNum]);
-        t2Text.setText(taboo2[randNum]);
-        t3Text.setText(taboo3[randNum]);
-        t4Text.setText(taboo4[randNum]);
-        t5Text.setText(taboo5[randNum]);
+        passList.add(words[index]);
+        randNum = rgenerator.nextInt(validIndices.size());
+        index = validIndices.get(randNum);
+        validIndices.remove(randNum);
+        mwText.setText(words[index]);
+        t1Text.setText(taboo1[index]);
+        t2Text.setText(taboo2[index]);
+        t3Text.setText(taboo3[index]);
+        t4Text.setText(taboo4[index]);
+        t5Text.setText(taboo5[index]);
         if (teamNum ==  1){
             pass_count1++;
             score1--;
@@ -176,20 +200,20 @@ public class InGameActivity extends Activity {
         double temp = endTime - startTime;
         if (temp < sw_time) {
             sw_time = temp;
-            sw_word = words[randNum];
+            sw_word = words[index];
         } else if (temp > lw_time) {
             lw_time = temp;
-            lw_word = words[randNum];
+            lw_word = words[index];
         }
-
         startTime = endTime;
-
-        randNum = rgenerator.nextInt(words.length);
-        mwText.setText(words[randNum]);
-        t1Text.setText(taboo1[randNum]);
-        t2Text.setText(taboo2[randNum]);
-        t3Text.setText(taboo3[randNum]);
-        t4Text.setText(taboo4[randNum]);
-        t5Text.setText(taboo5[randNum]);
+        randNum = rgenerator.nextInt(validIndices.size());
+        index = validIndices.get(randNum);
+        validIndices.remove(randNum);
+        mwText.setText(words[index]);
+        t1Text.setText(taboo1[index]);
+        t2Text.setText(taboo2[index]);
+        t3Text.setText(taboo3[index]);
+        t4Text.setText(taboo4[index]);
+        t5Text.setText(taboo5[index]);
     }
 }

@@ -6,21 +6,24 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 
 public class WinnerScreenActivity extends Activity {
 
-    private int score1;
-    private int score2;
-
+    private int score1, score2;
     private double sw_time, lw_time;
-    private String sw_word, lw_word;
+    private String sw_word, lw_word, name1, name2;
     private int hsr_score, hsr_team, pass_count1, correct_count1, pass_count2, correct_count2;
+    private ArrayList<String> passList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winner_screen);
         TextView winner = (TextView) findViewById(R.id.textView5);
         Intent win = getIntent();
+        passList = win.getStringArrayListExtra(TitleScreenActivity.PASS_LIST);
+        name1 = win.getStringExtra(TitleScreenActivity.NAME1);
+        name1 = win.getStringExtra(TitleScreenActivity.NAME2);
         sw_time = win.getDoubleExtra(TitleScreenActivity.SW_TIME, 0);
         lw_time = win.getDoubleExtra(TitleScreenActivity.LW_TIME, 0);
         sw_word = win.getStringExtra(TitleScreenActivity.SW_WORD);
@@ -50,24 +53,6 @@ public class WinnerScreenActivity extends Activity {
     public void Restart(View view)
     {
         Intent restart = new Intent(this, SettingsActivity.class);
-        /*int rounds = 6;
-        int nextTeam = 1;
-        int team1score = 0;
-        int team2score = 0;
-        restart.putExtra(TitleScreenActivity.T1_SCORE, team1score);
-        restart.putExtra(TitleScreenActivity.T2_SCORE, team2score);
-        restart.putExtra(TitleScreenActivity.NEXT_UP, nextTeam);
-        restart.putExtra(TitleScreenActivity.ROUNDS_LEFT,rounds);
-        restart.putExtra(TitleScreenActivity.SW_WORD, SW_WORD);
-        restart.putExtra(TitleScreenActivity.SW_TIME, SW_TIME);
-        restart.putExtra(TitleScreenActivity.SW_TEAM, SW_TEAM);
-        restart.putExtra(TitleScreenActivity.LW_WORD, LW_WORD);
-        restart.putExtra(TitleScreenActivity.LW_TIME,LW_TIME);
-        restart.putExtra(TitleScreenActivity.LW_TEAM,LW_TEAM);
-        restart.putExtra(TitleScreenActivity.HSR_SCORE,HSR_SCORE);
-        restart.putExtra(TitleScreenActivity.HSR_TEAM,HSR_TEAM);
-        restart.putExtra(TitleScreenActivity.HSR_ROUND,HSR_ROUND);
-        */
         startActivity(restart);
     }
 
@@ -90,6 +75,9 @@ public class WinnerScreenActivity extends Activity {
         it.putExtra(TitleScreenActivity.PASS_COUNT2, pass_count2);
         it.putExtra(TitleScreenActivity.CORRECT_COUNT1, correct_count1);
         it.putExtra(TitleScreenActivity.CORRECT_COUNT2, correct_count2);
+        it.putExtra(TitleScreenActivity.NAME1, name1);
+        it.putExtra(TitleScreenActivity.NAME2, name2);
+        it.putStringArrayListExtra(TitleScreenActivity.PASS_LIST, passList);
         startActivity(it);
     }
 
