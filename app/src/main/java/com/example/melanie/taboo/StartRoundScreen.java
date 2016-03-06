@@ -30,8 +30,8 @@ public class StartRoundScreen extends Activity {
         TextView left = (TextView) findViewById(R.id.textView2);
         TextView score1 = (TextView) findViewById(R.id.textView3);
         TextView score2 = (TextView) findViewById(R.id.textView4);
-        next.setText("Next Up: " + nextTeam);
-        left.setText("Rounds Left: " + rounds);
+        next.setText("GET READY Team " + nextTeam);
+        left.setText("ROUNDS LEFT: " + rounds);
         score1.setText("" + team1score);
         score2.setText("" + team2score);
 

@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="50dp">
+    android:paddingTop="50dp"
+    android:background="#05B198">
 
     <ImageView android:id="@+id/tabooLogo"
         android:layout_centerHorizontal="true"
@@ -16,7 +17,9 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_centerInParent="true"
+        android:textSize="50dp"
         android:text="Play"
+        android:background="@android:color/holo_green_light"
         android:id="@+id/playButton"
         android:onClick="sendtoStartRoundScreen"/>
 
@@ -39,6 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="About"
+        android:textSize="20dp"
+        android:background="#F3CE41"
         android:id="@+id/aboutButton"
         android:onClick="sendtoAbout"
          />
@@ -51,6 +56,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Rules"
+        android:textSize="20dp"
+        android:background="#9C59B8"
         android:onClick="sendtoRules"
         android:id="@+id/rulesButton" />
 
