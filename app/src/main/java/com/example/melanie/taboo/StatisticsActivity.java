@@ -85,9 +85,6 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
             text2.setText(tempName);
             text3.setText("had the HIGHEST SCORING round with\n");
             text4.setText("" + hsr_score + " POINTS");
-
-            text3.setText("It was guessed in\n");
-            text4.setText(String.format("%.2f", lw_time) + " seconds");
         }
         else if (pos == 3){
             text1.setText("");
