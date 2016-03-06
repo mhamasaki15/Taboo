@@ -12,12 +12,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class SettingsActivity extends Activity implements AdapterView.OnItemSelectedListener {
-    private int rounds;
-    private double time;
-    private String team1;
-    private String team2;
-    public int score1;
-    public int score2;
+    private int rounds = 6;
+    private double time = 60.0;
+    private String team1 = "name1";
+    private String team2 = "name2";
+    public int score1 = 0;
+    public int score2 = 0;
     private  String SW_WORD = "3";
     private  int SW_TEAM = 1;
     private  double SW_TIME = 60.0;
@@ -41,7 +41,7 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         spinner2.setAdapter(adapter2);
         EditText name1 = (EditText) findViewById(R.id.Team1Name);
         EditText name2 = (EditText) findViewById(R.id.Team2Name);
-        name1.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        /* name1.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 int id = actionId;
@@ -55,7 +55,7 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
                 }
                 return false;
             }
-        });
+        }); */
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
