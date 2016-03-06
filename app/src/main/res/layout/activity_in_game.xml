@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="50dp">
+    android:paddingTop="50dp"
+    android:background="#05B198"
+    android:layout_centerHorizontal="true">
+
 
     <TextView
         android:layout_width="250dp"
@@ -14,14 +17,25 @@
         android:id="@+id/textView6"
         android:layout_centerHorizontal="true" />
 
-
+<LinearLayout
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="10dp"
+    android:id="@+id/cards"
+    android:layout_below="@id/textView6"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    android:background="#7FC7AF">
     <TextView
         android:layout_below="@id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:textAlignment="center"
+        android:layout_margin="10dp"
         android:id="@+id/main_word"
+        android:textStyle="bold"
         android:text="MainWord" />
 
     <TextView
@@ -71,6 +85,8 @@
         android:layout_below="@id/tabooText4"
         />
 
+</LinearLayout>
+
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -82,7 +98,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="horizontal"
-        android:layout_below="@id/tabooText5"
+        android:layout_below="@id/cards"
         tools:context="com.example.melanie.taboo.TitleScreenActivity">
 
         <Button
