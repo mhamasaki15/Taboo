@@ -52,6 +52,15 @@ public class WinnerScreenActivity extends Activity {
         restart.putExtra(TitleScreenActivity.T2_SCORE, team2score);
         restart.putExtra(TitleScreenActivity.NEXT_UP, nextTeam);
         restart.putExtra(TitleScreenActivity.ROUNDS_LEFT,rounds);
+        restart.putExtra(TitleScreenActivity.SW_WORD, SW_WORD);
+        restart.putExtra(TitleScreenActivity.SW_TIME, SW_TIME);
+        restart.putExtra(TitleScreenActivity.SW_TEAM, SW_TEAM);
+        restart.putExtra(TitleScreenActivity.LW_WORD, LW_WORD);
+        restart.putExtra(TitleScreenActivity.LW_TIME,LW_TIME);
+        restart.putExtra(TitleScreenActivity.LW_TEAM,LW_TEAM);
+        restart.putExtra(TitleScreenActivity.HSR_SCORE,HSR_SCORE);
+        restart.putExtra(TitleScreenActivity.HSR_TEAM,HSR_TEAM);
+        restart.putExtra(TitleScreenActivity.HSR_ROUND,HSR_ROUND);
 
         startActivity(restart);
     }

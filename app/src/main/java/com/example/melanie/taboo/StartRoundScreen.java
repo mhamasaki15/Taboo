@@ -36,7 +36,6 @@ public class StartRoundScreen extends Activity {
         rounds = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 0);
         nextTeam = intent.getIntExtra( TitleScreenActivity.NEXT_UP, 1);
         team1score = intent.getIntExtra( TitleScreenActivity.T1_SCORE, 0);
-
         team2score = intent.getIntExtra(TitleScreenActivity.T2_SCORE, 0);
         SW_WORD = intent.getStringExtra(TitleScreenActivity.SW_WORD);
         SW_TIME = intent.getDoubleExtra(TitleScreenActivity.SW_TIME, 0.0);
