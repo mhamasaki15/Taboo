@@ -14,11 +14,13 @@
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:text="START ROUND"
+        android:textSize="30dp"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="167dp"
         android:onClick="RoundScreen"
+        android:background="@android:color/holo_green_light"
     />
 
 
@@ -59,6 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TEAM 1"
+        android:textColor="@android:color/holo_blue_bright"
         android:paddingRight="30dp"
         android:textSize="30sp"
         android:id="@+id/team1name"
@@ -68,7 +71,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="Score 1"
-            android:textSize="30sp"
+            android:textSize="50sp"
             android:id="@+id/textView3"
             android:layout_below="@+id/team1name"
             />
@@ -82,6 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TEAM 2"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="30sp"
         android:id="@+id/team2name"
          />
@@ -89,7 +93,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:text="Score 2"
-        android:textSize="30sp"
+        android:textSize="50sp"
         android:id="@+id/textView4"
         android:layout_below="@+id/team2name"
         />
