@@ -92,7 +92,19 @@ public class InGameActivity extends Activity {
     }
 
     public void roundOver(View view){
+        if (score1>hsr_score) {
+            hsr_score = score1;
+            hsr_team = 1;
+            hsr_round = roundsLeft; //passes rounds left, but need to subtract value by 5
 
+        }
+        if (score2>hsr_score){
+            hsr_score = score1;
+            hsr_team = 1;
+            hsr_round = roundsLeft;
+
+
+        }
         if (roundsLeft == 1) {
             Intent doneData = new Intent(this, WinnerScreenActivity.class);
             doneData.putExtra(TitleScreenActivity.T1_SCORE, score1);
@@ -119,6 +131,15 @@ public class InGameActivity extends Activity {
             sendData.putExtra(TitleScreenActivity.NEXT_UP, teamNum);
             sendData.putExtra(TitleScreenActivity.T1_SCORE, score1);
             sendData.putExtra(TitleScreenActivity.T2_SCORE, score2);
+            sendData.putExtra(TitleScreenActivity.SW_WORD,sw_word);
+            sendData.putExtra(TitleScreenActivity.LW_WORD,lw_word);
+            sendData.putExtra(TitleScreenActivity.SW_TEAM,sw_team);
+            sendData.putExtra(TitleScreenActivity.SW_TIME,sw_time);
+            sendData.putExtra(TitleScreenActivity.LW_TIME,lw_time);
+            sendData.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
+            sendData.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
+            sendData.putExtra(TitleScreenActivity.HSR_TEAM, hsr_team);
+
             startActivity(sendData);
         }
     }
@@ -134,21 +155,21 @@ public class InGameActivity extends Activity {
         startTime = System.currentTimeMillis()/1000.0;
     }
 
-    public void correctWord(View view){
+    public void correctWord(View view) {
         if (teamNum == 2) score2++;
         else score1++;
-        endTime = System.currentTimeMillis()/1000.0;
-        double temp = endTime-startTime;
-        if (temp < sw_time){
+        endTime = System.currentTimeMillis() / 1000.0;
+        double temp = endTime - startTime;
+        if (temp < sw_time) {
             sw_time = temp;
             sw_word = words[randNum];
             sw_team = teamNum;
-        }
-        else if (temp > lw_time) {
+        } else if (temp > lw_time) {
             lw_time = temp;
             lw_word = words[randNum];
             lw_team = teamNum;
         }
+
         startTime = endTime;
 
         randNum = rgenerator.nextInt(words.length);
@@ -158,6 +179,23 @@ public class InGameActivity extends Activity {
         t3Text.setText(taboo3[randNum]);
         t4Text.setText(taboo4[randNum]);
         t5Text.setText(taboo5[randNum]);
+    }
+
+    public void Statistics(View view)
+    {
+        Intent send_stats = new Intent(this, WinnerScreenActivity.class);
+        send_stats.putExtra(TitleScreenActivity.SW_TIME, sw_time);
+        send_stats.putExtra(TitleScreenActivity.SW_TEAM,sw_team);
+        send_stats.putExtra(TitleScreenActivity.SW_WORD,sw_word);
+        send_stats.putExtra(TitleScreenActivity.LW_TIME, lw_time);
+        send_stats.putExtra(TitleScreenActivity.LW_TEAM, lw_team);
+        send_stats.putExtra(TitleScreenActivity.LW_WORD, lw_word);
+        send_stats.putExtra(TitleScreenActivity.HSR_TEAM, hsr_team);
+        send_stats.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
+        send_stats.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
+        startActivity(send_stats);
+
+
     }
     //make a passing timer/set number of pass
 

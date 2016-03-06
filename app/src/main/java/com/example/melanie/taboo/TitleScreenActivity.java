@@ -53,11 +53,11 @@ public class TitleScreenActivity extends AppCompatActivity {
         double long_time = 0.0;
         int sw_team = 1;
         int long_team = 1;
-        int hsr_team = 1;
+        int hsr_team = 0;
         String word = "";
         String long_word = "";
         int high_round = 9;
-        int high_score = 1200;
+        int high_score = 0;
 
         intent.putExtra(T2_SCORE, team2Score);
         intent.putExtra(SW_WORD,word );
