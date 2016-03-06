@@ -63,14 +63,14 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         if (pos == 0){
             text1.setText("The fastest guessed word was...");
             text2.setText(sw_word + "\n");
-            text3.setText("Team " + "teamPlaceholder" + " guessed it in\n");
-            text4.setText(String.valueOf(sw_time) + " seconds");
+            text3.setText("It was guessed in\n");
+            text4.setText(String.format("%.2f", sw_time) + " seconds");
         }
         else if (pos == 1){
             text1.setText("The slowest guessed word was...");
             text2.setText(lw_word + "\n");
-            text3.setText("Team " + "teamPlaceHolder" + " guessed it in\n");
-            text4.setText(String.valueOf(lw_time) + "seconds");
+            text3.setText("It was guessed in\n");
+            text4.setText(String.format("%.2f", lw_time) + " seconds");
         }
         else if (pos == 2){
             text1.setText("Team ");

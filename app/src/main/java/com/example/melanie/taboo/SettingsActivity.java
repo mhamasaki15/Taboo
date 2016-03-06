@@ -11,11 +11,14 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class SettingsActivity extends Activity implements AdapterView.OnItemSelectedListener {
     private int rounds, time;
     private String team1;
     private String team2;
-
+    private boolean uscSet =  true, popSet = true; //basic set always included
+    private ArrayList<Integer> newList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,23 +34,6 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         spinner2.setAdapter(adapter2);
         spinner.setOnItemSelectedListener(this);
         spinner2.setOnItemSelectedListener(this);
-        EditText name1 = (EditText) findViewById(R.id.Team1Name);
-        EditText name2 = (EditText) findViewById(R.id.Team2Name);
-        name1.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                int id = actionId;
-                team1 = v.getText().toString();
-                return false;
-            }
-        });
-        name2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                team2 = v.getText().toString();
-                return false;
-            }
-        });
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
@@ -74,32 +60,34 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
 
     public void sendToReturn(View view)
     {
-        int team2Score = 0;
-        double short_time = 61.0;
-        double long_time = 0.0;
-       // int sw_team = 1;
-     //   int long_team = 1;
-        int hsr_team = 0;
-        String long_word = "";
-        String short_word = "";
-        int high_round = 0;
-        int high_score = 0;
-        int team1Score = 0;
+        EditText name1 = (EditText) findViewById(R.id.Team1Name);
+        EditText name2 = (EditText) findViewById(R.id.Team2Name);
+        team1 = name1.getText().toString();
+        team2 = name2.getText().toString();
         Intent ret = new Intent(this, StartRoundScreen.class);
         ret.putExtra(TitleScreenActivity.ROUNDS_LEFT, rounds);
         ret.putExtra(TitleScreenActivity.TIME, time);
         ret.putExtra(TitleScreenActivity.NAME1, team1);
         ret.putExtra(TitleScreenActivity.NAME2, team2);
-        ret.putExtra(TitleScreenActivity.T2_SCORE, team2Score);
-        ret.putExtra(TitleScreenActivity.SW_TIME,short_time);
-        ret.putExtra(TitleScreenActivity.SW_WORD,short_word );
-        ret.putExtra(TitleScreenActivity.LW_TIME,long_time);
-        ret.putExtra(TitleScreenActivity.LW_WORD,long_word);
-        ret.putExtra(TitleScreenActivity.HSR_TEAM,hsr_team);
-        ret.putExtra(TitleScreenActivity.HSR_ROUND,high_round);
-        ret.putExtra(TitleScreenActivity.HSR_SCORE,high_score);
-        ret.putExtra(TitleScreenActivity.T1_SCORE, team1Score);
+        ret.putExtra(TitleScreenActivity.T1_SCORE, 0);
+        ret.putExtra(TitleScreenActivity.T2_SCORE, 0);
+        ret.putExtra(TitleScreenActivity.SW_TIME, 121.0);
+        ret.putExtra(TitleScreenActivity.SW_WORD, "");
+        ret.putExtra(TitleScreenActivity.LW_TIME, 0.0);
+        ret.putExtra(TitleScreenActivity.LW_WORD, "");
+        ret.putExtra(TitleScreenActivity.HSR_TEAM, 0);
+        ret.putExtra(TitleScreenActivity.HSR_ROUND, 0);
+        ret.putExtra(TitleScreenActivity.HSR_SCORE, -1);
 
+        newList = new ArrayList<Integer>();
+        for (int i=0; i<10; i++) newList.add(i);
+        if (uscSet){
+            for (int i=10; i<20; i++) newList.add(i);
+        }
+        if (popSet){
+            for (int i=20; i<30; i++) newList.add(i);
+        }
+        ret.putIntegerArrayListExtra(TitleScreenActivity.INDICES, newList);
         startActivity(ret);
     }
 

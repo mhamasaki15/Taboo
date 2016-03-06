@@ -27,6 +27,7 @@ public class TitleScreenActivity extends AppCompatActivity {
     public static final String CORRECT_COUNT1 = "35";
     public static final String PASS_COUNT2 = "36";
     public static final String CORRECT_COUNT2 = "37";
+    public static final String INDICES = "41";
 
 
     @Override

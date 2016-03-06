@@ -8,11 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class StartRoundScreen extends Activity {
     private int rounds, nextTeam, team1score, team2score, hsr_score, hsr_team, hsr_round, time;
     private  double sw_time, lw_time;
     private int pass_count1, pass_count2, correct_count1, correct_count2;
     private String sw_word, lw_word, name1, name2;
+    private ArrayList<Integer> validIndices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,7 @@ public class StartRoundScreen extends Activity {
         Intent intent = getIntent();
 
         setContentView(R.layout.activity_start_round_screen);
+        validIndices = intent.getIntegerArrayListExtra(TitleScreenActivity.INDICES);
         rounds = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 0);
         time = intent.getIntExtra(TitleScreenActivity.TIME, 0);
         nextTeam = intent.getIntExtra( TitleScreenActivity.NEXT_UP, 1);
