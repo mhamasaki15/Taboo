@@ -81,4 +81,28 @@ public class StartRoundScreen extends Activity {
 
     }
 
+    public void nah(View view)
+    {
+
+        Intent send = new Intent(this, TitleScreenActivity.class);
+
+        send.putExtra(TitleScreenActivity.T1_SCORE, team1score);
+        send.putExtra(TitleScreenActivity.T2_SCORE, team2score);
+        send.putExtra(TitleScreenActivity.ROUNDS_LEFT, rounds);
+        send.putExtra(TitleScreenActivity.NEXT_UP, nextTeam);
+        send.putExtra(TitleScreenActivity.SW_WORD, SW_WORD);
+        send.putExtra(TitleScreenActivity.SW_TIME, SW_TIME);
+        send.putExtra(TitleScreenActivity.SW_TEAM, SW_TEAM);
+        send.putExtra(TitleScreenActivity.LW_WORD, LW_WORD);
+        send.putExtra(TitleScreenActivity.LW_TIME,LW_TIME);
+        send.putExtra(TitleScreenActivity.LW_TEAM,LW_TEAM);
+        send.putExtra(TitleScreenActivity.HSR_SCORE,HSR_SCORE);
+        send.putExtra(TitleScreenActivity.HSR_TEAM,HSR_TEAM);
+        send.putExtra(TitleScreenActivity.HSR_ROUND,HSR_ROUND);
+
+        startActivity(send);
+
+
+    }
+
 }
