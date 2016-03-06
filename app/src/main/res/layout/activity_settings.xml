@@ -61,4 +61,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="55dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/Play"
+        android:layout_below="@+id/spinner2"
+        android:layout_centerHorizontal="true"
+        android:onClick="sendToReturn"/>
+
 </RelativeLayout>
