@@ -28,4 +28,24 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="116dp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:text="nah"
+        android:id="@+id/nah"
+        android:onClick="nah"
+        android:layout_marginBottom="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:text="Statistics"
+        android:id="@+id/statistics"
+        android:onClick="stats"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
