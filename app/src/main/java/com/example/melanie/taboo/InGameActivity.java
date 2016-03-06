@@ -101,6 +101,7 @@ public class InGameActivity extends Activity {
         startTime = (System.currentTimeMillis() / 1000.0);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         new CountDownTimer((time*10000 + 2000),1000)
 =======
 <<<<<<< HEAD
@@ -110,6 +111,13 @@ public class InGameActivity extends Activity {
 >>>>>>> origin/master
 >>>>>>> origin/master
         {
+=======
+
+
+        new CountDownTimer((time*1000 + 2500), 1000){
+
+
+>>>>>>> origin/master
             public void onTick(long millisUntilFinished)
             {
                 timer.setText(""+ (millisUntilFinished / 1000 - 1));

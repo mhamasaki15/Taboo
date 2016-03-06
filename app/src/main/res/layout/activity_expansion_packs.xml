@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.melanie.taboo.ExpansionPacks"
+    android:background="#FF05B198">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXPANSION PACKS"
+            android:textStyle="bold"
+            android:textColor="#FFF3CE41"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="40dp"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="Choose which kickass expansion packs you want to include: "
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textSize="30dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USC"
+            android:id="@+id/uscBox"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#FFC2185B"
+            android:textStyle="italic"
+            android:onClick="onCheckBoxClicked"
+            android:textSize="35dp"/>
+        <CheckBox
+            android:id="@+id/popBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pop Culture"
+            android:textColor="#FFC2185B"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"
+            android:textStyle="italic"
+
+            android:textSize="35dp"/>
+        <CheckBox
+            android:id="@+id/presBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presidential Candidates 2016"
+            android:textStyle="italic"
+            android:textColor="#FFC2185B"
+            android:layout_marginLeft="30dp"
+            android:onClick="onCheckBoxClicked"
+            android:textSize="35dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Let's Play Already!"
+            android:background="@android:color/holo_green_light"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

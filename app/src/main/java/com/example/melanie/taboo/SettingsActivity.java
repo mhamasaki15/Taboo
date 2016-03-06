@@ -148,14 +148,8 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         ret.putStringArrayListExtra(TitleScreenActivity.PASS_LIST, passList);
 
         newList = new ArrayList<Integer>();
-        for (int i=0; i<10; i++) newList.add(i);
-        if (uscSet){
-            for (int i=10; i<20; i++) newList.add(i);
-        }
-        if (popSet){
-            for (int i=20; i<30; i++) newList.add(i);
-        }
-        // format: if (setname) add those things.
+        for (int i=0; i<65; i++) newList.add(i);
+
         ret.putIntegerArrayListExtra(TitleScreenActivity.INDICES, newList);
         startActivity(ret);
     }

@@ -65,39 +65,26 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         if (pos == 0){
             text1.setText("The FASTEST guessed word was...");
             text2.setText(sw_word + "\n");
-<<<<<<< HEAD
-            text3.setText("TEAM " + "teamPlaceholder" + " got it in\n");
-            text4.setText(String.valueOf(sw_time) + " seconds");
-=======
+
             text3.setText("It was guessed in\n");
             text4.setText(String.format("%.2f", sw_time) + " seconds");
->>>>>>> origin/master
+
         }
         else if (pos == 1){
             text1.setText("The SLOWEST guessed word was...");
             text2.setText(lw_word + "\n");
-<<<<<<< HEAD
-            text3.setText("TEAM " + "teamPlaceHolder" + " got it in\n");
-            text4.setText(String.valueOf(lw_time) + "seconds");
-        }
-        else if (pos == 2){
-            text1.setText("TEAM " + "teamPlaceHolder\n");
-            text2.setText("had the HIGHEST SCORING round with\n");
-            text3.setText("");
-            text4.setText("" + hsr_score + " POINTS");
-=======
+
             text3.setText("It was guessed in\n");
             text4.setText(String.format("%.2f", lw_time) + " seconds");
         }
         else if (pos == 2){
-            text1.setText("Team ");
             String tempName;
-            if (hsr_team==1) tempName = name1;
+            if (hsr_team == 1) tempName = name1;
             else tempName = name2;
+            text1.setText("TEAM" + "\n");
             text2.setText(tempName);
-            text3.setText("had the highest scoring round with\n");
-            text4.setText("" + hsr_score + " points");
->>>>>>> origin/master
+            text3.setText("had the HIGHEST SCORING round with\n");
+            text4.setText("" + hsr_score + " POINTS");
         }
         else if (pos == 3){
             text1.setText("");
@@ -107,27 +94,14 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
             myListView.setVisibility(View.VISIBLE);
         }
         else if (pos == 4){
-<<<<<<< HEAD
-            double t1P = (double)correct_count1/(pass_count1+correct_count1);
-            text1.setText("TEAM " + ":");
-            text2.setText(String.valueOf(t1P) + "%\n");
-            double t2P = (double)correct_count2/(pass_count2+correct_count2);
-            text3.setText("TEAM " + "teamPlaceHolder:");
-            text4.setText(String.valueOf(t2P) + "%\n");
-=======
-            double t1P = 100.0*correct_count1/(pass_count1+correct_count1);
-            text1.setText("Team " + ":");
+            double t1P = 100.0*(double)correct_count1/(pass_count1+correct_count1);
+            text1.setText("Team " + name1 +":");
             text2.setText(String.format("%.2f", t1P) + "%\n");
             double t2P = 100.0*(double)correct_count2/(pass_count2+correct_count2);
-            text3.setText("Team " + "teamPlaceHolder:");
+            text3.setText("Team " + name2 + ":");
             text4.setText(String.format("%.2f", t2P) + "%\n");
->>>>>>> origin/master
 
         }
-        // An item was selected. You can retrieve the selected item using
-        // parent.getItemAtPosition(pos)
-
-        //head to head graph
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
