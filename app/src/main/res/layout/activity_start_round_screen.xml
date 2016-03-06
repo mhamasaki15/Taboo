@@ -53,7 +53,7 @@
     android:id="@+id/teamnames"
     android:layout_below="@id/textView"
     android:orientation="horizontal"
-    
+
     android:layout_centerHorizontal="true">
 
     <LinearLayout
@@ -78,6 +78,7 @@
             android:text="Score 1"
             android:textColor="@android:color/white"
             android:textSize="50sp"
+            android:textAlignment="center"
             android:id="@+id/textView3"
             android:layout_below="@+id/team1name"
             />
@@ -101,6 +102,7 @@
         android:text="Score 2"
         android:textColor="@android:color/white"
         android:textSize="50sp"
+        android:textAlignment="center"
         android:id="@+id/textView4"
         android:layout_below="@+id/team2name"
         />
