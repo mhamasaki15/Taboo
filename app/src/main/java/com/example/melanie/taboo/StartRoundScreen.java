@@ -80,6 +80,7 @@ public class StartRoundScreen extends Activity {
         send.putExtra(TitleScreenActivity.CORRECT_COUNT1, correct_count1);
         send.putExtra(TitleScreenActivity.PASS_COUNT1, pass_count2);
         send.putExtra(TitleScreenActivity.CORRECT_COUNT1, correct_count2);
+        send.putIntegerArrayListExtra(TitleScreenActivity.INDICES, validIndices);
 
         startActivity(send);
 
