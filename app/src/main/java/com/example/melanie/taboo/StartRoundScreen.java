@@ -16,6 +16,7 @@ public class StartRoundScreen extends Activity {
     private int pass_count1, pass_count2, correct_count1, correct_count2;
     private String sw_word, lw_word, name1, name2;
     private ArrayList<Integer> validIndices;
+    private ArrayList<String> passList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class StartRoundScreen extends Activity {
         Intent intent = getIntent();
 
         setContentView(R.layout.activity_start_round_screen);
+        passList = intent.getStringArrayListExtra(TitleScreenActivity.PASS_LIST);
         validIndices = intent.getIntegerArrayListExtra(TitleScreenActivity.INDICES);
         rounds = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 0);
         time = intent.getIntExtra(TitleScreenActivity.TIME, 0);
@@ -81,6 +83,7 @@ public class StartRoundScreen extends Activity {
         send.putExtra(TitleScreenActivity.PASS_COUNT1, pass_count2);
         send.putExtra(TitleScreenActivity.CORRECT_COUNT1, correct_count2);
         send.putIntegerArrayListExtra(TitleScreenActivity.INDICES, validIndices);
+        send.putStringArrayListExtra(TitleScreenActivity.PASS_LIST, passList);
 
         startActivity(send);
 

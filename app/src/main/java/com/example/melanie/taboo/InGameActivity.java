@@ -19,6 +19,7 @@ public class InGameActivity extends Activity {
     private String[] words, taboo1, taboo2, taboo3, taboo4, taboo5;
     private ArrayList<Integer> validIndices;
     private int index;
+    private ArrayList<String> passList;
     private TextView mwText, t1Text, t2Text, t3Text, t4Text, t5Text,timer;
 
     private double startTime, endTime;
@@ -38,6 +39,7 @@ public class InGameActivity extends Activity {
         timer = (TextView) findViewById(R.id.textView6);
 
         Intent intent = getIntent();
+        passList = intent.getStringArrayListExtra(TitleScreenActivity.PASS_LIST);
         validIndices = intent.getIntegerArrayListExtra(TitleScreenActivity.INDICES);
         sw_time = intent.getDoubleExtra(TitleScreenActivity.SW_TIME, 1.0);
         lw_time = intent.getDoubleExtra(TitleScreenActivity.LW_TIME, 1.0);
@@ -90,7 +92,7 @@ public class InGameActivity extends Activity {
         {
             public void onTick(long millisUntilFinished)
             {
-                timer.setText(""+ (millisUntilFinished / 1000 - 2));
+                timer.setText(""+ (millisUntilFinished / 1000 - 1));
             }
             public void onFinish()
             {
@@ -129,6 +131,7 @@ public class InGameActivity extends Activity {
             doneData.putExtra(TitleScreenActivity.PASS_COUNT2, pass_count2);
             doneData.putExtra(TitleScreenActivity.NAME1, name1);
             doneData.putExtra(TitleScreenActivity.NAME2, name2);
+            doneData.putStringArrayListExtra(TitleScreenActivity.PASS_LIST, passList);
 
             startActivity(doneData);
         }
@@ -151,12 +154,15 @@ public class InGameActivity extends Activity {
             sendData.putExtra(TitleScreenActivity.NAME1, name1);
             sendData.putExtra(TitleScreenActivity.NAME2, name2);
             sendData.putIntegerArrayListExtra(TitleScreenActivity.INDICES, validIndices);
+            sendData.putStringArrayListExtra(TitleScreenActivity.PASS_LIST, passList);
+
 
             startActivity(sendData);
         }
     }
 
     public void passWord(View view){
+        passList.add(words[index]);
         randNum = rgenerator.nextInt(validIndices.size());
         index = validIndices.get(randNum);
         validIndices.remove(randNum);

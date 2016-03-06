@@ -10,12 +10,15 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class StatisticsActivity extends Activity implements AdapterView.OnItemSelectedListener {
     private double sw_time, lw_time;
     private String sw_word, lw_word, name1, name2;
     private int sw_team, lw_team, hsr_score, hsr_team, hsr_round, pass_count1, correct_count1, pass_count2, correct_count2;
 
-    private ArrayAdapter myArrayAdapter;
+    private ArrayList<String> passList;
+    private ArrayAdapter<String> myArrayAdapter;
     private ListView myListView;
     private TextView text1, text2, text3, text4;
 
@@ -29,6 +32,7 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         text3 = (TextView)findViewById(R.id.part3);
         text4 = (TextView)findViewById(R.id.part4);
         Intent intent = getIntent();
+        passList = intent.getStringArrayListExtra(TitleScreenActivity.PASS_LIST);
         sw_time = intent.getDoubleExtra(TitleScreenActivity.SW_TIME, 1.0);
         lw_time = intent.getDoubleExtra(TitleScreenActivity.LW_TIME, 1.0);
         sw_word = intent.getStringExtra(TitleScreenActivity.SW_WORD);
@@ -44,10 +48,8 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         name2 = intent.getStringExtra(TitleScreenActivity.NAME2);
 
         myListView = (ListView)findViewById(R.id.passedList);
-        //Bundle b = intent.getBundleExtra(TitleScreenActivity.PASS_ARRAY);
-        //String[] passArray = b.getStringArray(TitleScreenActivity.PASS_ARRAY);
-        String[] passArray = {"nice", "memes", "bro", "yeah"};
-        myArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, passArray);
+        //String[] passArray = {"nice", "memes", "bro", "yeah"};
+        myArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, passList);
         myListView.setAdapter(myArrayAdapter);
         myListView.setVisibility(View.INVISIBLE);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);

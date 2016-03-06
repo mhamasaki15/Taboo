@@ -19,6 +19,7 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
     private String team2;
     private boolean uscSet =  true, popSet = true; //basic set always included
     private ArrayList<Integer> newList;
+    private ArrayList<String> passList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +79,8 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         ret.putExtra(TitleScreenActivity.HSR_TEAM, 0);
         ret.putExtra(TitleScreenActivity.HSR_ROUND, 0);
         ret.putExtra(TitleScreenActivity.HSR_SCORE, -1);
+        passList = new ArrayList<String>();
+        ret.putStringArrayListExtra(TitleScreenActivity.PASS_LIST, passList);
 
         newList = new ArrayList<Integer>();
         for (int i=0; i<10; i++) newList.add(i);
@@ -87,6 +90,7 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         if (popSet){
             for (int i=20; i<30; i++) newList.add(i);
         }
+        // format: if (setname) add those things.
         ret.putIntegerArrayListExtra(TitleScreenActivity.INDICES, newList);
         startActivity(ret);
     }
