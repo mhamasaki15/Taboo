@@ -16,6 +16,8 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
     private double time;
     private String team1;
     private String team2;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,14 +36,14 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 int id = actionId;
-                if(id == R.id.Team1Name)
-                {
-                    team1 = v.getText().toString();
-                }
-                else
-                {
-                    team2 = v.getText().toString();
-                }
+                team1 = v.getText().toString();
+                return false;
+            }
+        });
+        name2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                team2 = v.getText().toString();
                 return false;
             }
         });
@@ -106,10 +108,36 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
 
     public void sendToReturn(View view)
     {
+        int team2Score = 0;
+        double short_time = 61.0;
+        double long_time = 0.0;
+        double time = 60.0;
+        int sw_team = 1;
+        int long_team = 1;
+        int hsr_team = 0;
+        String long_word = "";
+        String short_word = "";
+        int high_round = 9;
+        int high_score = 0;
+        int team1Score = 0;
         Intent ret = new Intent(this, StartRoundScreen.class);
         ret.putExtra(TitleScreenActivity.ROUNDS_LEFT,rounds);
-        //ret.putExtra(TitleScreenActivity.NAME1, team1);
-        //ret.putExtra(TitleScreenActivity.NAME2, team2);
+        ret.putExtra(TitleScreenActivity.NAME1, team1);
+        ret.putExtra(TitleScreenActivity.NAME2, team2);
+        ret.putExtra(TitleScreenActivity.T2_SCORE, team2Score);
+        ret.putExtra(TitleScreenActivity.SW_TIME,short_time);
+        ret.putExtra(TitleScreenActivity.SW_WORD,short_word );
+        ret.putExtra(TitleScreenActivity.LW_TIME,long_time);
+        ret.putExtra(TitleScreenActivity.Time,time);
+        ret.putExtra(TitleScreenActivity.SW_TIME, sw_team);
+        ret.putExtra(TitleScreenActivity.LW_TEAM,long_team);
+        ret.putExtra(TitleScreenActivity.LW_WORD,long_word);
+        ret.putExtra(TitleScreenActivity.HSR_TEAM,hsr_team);
+        ret.putExtra(TitleScreenActivity.HSR_ROUND,high_round);
+        ret.putExtra(TitleScreenActivity.HSR_SCORE,high_score);
+        ret.putExtra(TitleScreenActivity.T1_SCORE, team1Score);
+
+
         startActivity(ret);
 
 
