@@ -30,4 +30,11 @@
         <item>sammie5</item>
     </string-array>
 
+    <string-array name="stats_array">
+        <item>Fastest Guess</item>
+        <item>Slowest Guess</item>
+        <item>Highest Scoring Round</item>
+        <item>Head to Head Graph</item>
+        <item>Percent Correct</item>
+    </string-array>
 </resources>
