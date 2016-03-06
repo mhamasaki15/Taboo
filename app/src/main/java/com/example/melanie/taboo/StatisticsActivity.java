@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
     private int sw_team, lw_team, hsr_score, hsr_team, hsr_round;
 
     private ArrayAdapter myArrayAdapter;
+    private ListView myListView;
     private TextView text1, text2, text3, text4;
 
     @Override
@@ -41,9 +43,14 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
         hsr_round = intent.getIntExtra(TitleScreenActivity.HSR_ROUND, 1);
         hsr_team = intent.getIntExtra(TitleScreenActivity.HSR_TEAM, 1);
+
+
+        myListView = (ListView)findViewById(R.id.passedList);
         Bundle b = intent.getBundleExtra(TitleScreenActivity.PASS_ARRAY);
-        
+        String[] passArray = b.getStringArray(TitleScreenActivity.PASS_ARRAY);
         myArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, passArray);
+        myListView.setAdapter(myArrayAdapter);
+        myListView.setVisibility(View.INVISIBLE);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.stats_array, android.R.layout.simple_spinner_item);
@@ -75,7 +82,11 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
             text4.setText("" + hsr_score + " points");
         }
         else if (pos == 3){
-            //passed words
+            text1.setText("");
+            text2.setText("");
+            text3.setText("");
+            text4.setText("");
+            myListView.setVisibility(View.INVISIBLE);
         }
         else if (pos == 4){
             text1.setText("Team " + "teamPlaceHolder:\n");
