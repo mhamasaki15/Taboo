@@ -35,6 +35,15 @@ public class WinnerScreenActivity extends Activity {
     public void Restart()
     {
         Intent restart = new Intent(this, StartRoundScreen.class);
+        int rounds = 6;
+        int nextTeam = 1;
+        int team1score = 0;
+        int team2score = 0;
+        restart.putExtra(TitleScreenActivity.T1_SCORE, team1score);
+        restart.putExtra(TitleScreenActivity.T2_SCORE,team2score);
+        restart.putExtra(TitleScreenActivity.NEXT_UP, nextTeam);
+        restart.putExtra(TitleScreenActivity.ROUNDS_LEFT,rounds);
+        
         startActivity(restart);
     }
 

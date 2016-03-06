@@ -26,10 +26,10 @@ public class StartRoundScreen extends Activity {
         nextTeam = intent.getIntExtra( TitleScreenActivity.NEXT_UP, 1);
         team1score = intent.getIntExtra( TitleScreenActivity.T1_SCORE, 0);
         team2score = intent.getIntExtra( TitleScreenActivity.T2_SCORE, 0);
-        TextView next = (TextView) findViewById(R.id.textView);
-        TextView left = (TextView) findViewById(R.id.textView2);
-        TextView score1 = (TextView) findViewById(R.id.textView3);
-        TextView score2 = (TextView) findViewById(R.id.textView4);
+        TextView next = (TextView) findViewById(R.id.next   );
+        TextView left = (TextView) findViewById(R.id.rounds);
+        TextView score1 = (TextView) findViewById(R.id.score1);
+        TextView score2 = (TextView) findViewById(R.id.score2);
         next.setText("Next Up: " + nextTeam);
         left.setText("Rounds Left: " + rounds);
         score1.setText("" + team1score);
