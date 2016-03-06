@@ -21,7 +21,7 @@ public class InGameActivity extends Activity {
     private double startTime, endTime;
     private double sw_time, lw_time;
     private String sw_word, lw_word;
-    private int sw_team, lw_team, hsr_score, hsr_team, hsr_round,time;
+    private int hsr_score, hsr_team, hsr_round, time, pass_count1, pass_count2, correct_count1, correct_count2;
 
     private Resources res;
     private int roundsLeft, teamNum, score1, score2, randNum;
@@ -40,17 +40,18 @@ public class InGameActivity extends Activity {
         lw_time = intent.getDoubleExtra(TitleScreenActivity.LW_TIME, 1.0);
         sw_word = intent.getStringExtra(TitleScreenActivity.SW_WORD);
         lw_word = intent.getStringExtra(TitleScreenActivity.LW_WORD);
-        sw_team = intent.getIntExtra(TitleScreenActivity.SW_TEAM, 1);
-        lw_team = intent.getIntExtra(TitleScreenActivity.LW_TEAM, 1);
         hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
         hsr_round = intent.getIntExtra(TitleScreenActivity.HSR_ROUND, 1);
         hsr_team = intent.getIntExtra(TitleScreenActivity.HSR_TEAM, 1);
-
         roundsLeft = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 21);
         teamNum = intent.getIntExtra(TitleScreenActivity.NEXT_UP, 22);
         score1 = intent.getIntExtra(TitleScreenActivity.T1_SCORE, 23);
         score2 = intent.getIntExtra(TitleScreenActivity.T2_SCORE, 24);
-        time = intent.getIntExtra(TitleScreenActivity.Time, 60);
+        time = intent.getIntExtra(TitleScreenActivity.TIME, 60);
+        correct_count1 = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT1, 0);
+        correct_count2 = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT2, 0);
+        pass_count1 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT1, 0);
+        pass_count2 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT2, 0);
 
         res = getResources();
         words = res.getStringArray(R.array.mainWord);
@@ -69,7 +70,7 @@ public class InGameActivity extends Activity {
         t4Text = (TextView)findViewById(R.id.tabooText4);
         t5Text = (TextView)findViewById(R.id.tabooText5);
 
-        mwText.setText(words[randNum]);
+        mwText.setText("" + time); //
         t1Text.setText(taboo1[randNum]);
         t2Text.setText(taboo2[randNum]);
         t3Text.setText(taboo3[randNum]);
@@ -78,7 +79,7 @@ public class InGameActivity extends Activity {
 
         startTime = (System.currentTimeMillis() / 1000.0);
 
-        new CountDownTimer((time*1000 + 2000),1000)
+        new CountDownTimer((time*1000 + 2000), 1000)
         {
             public void onTick(long millisUntilFinished)
             {
@@ -110,17 +111,17 @@ public class InGameActivity extends Activity {
             Intent doneData = new Intent(this, WinnerScreenActivity.class);
             doneData.putExtra(TitleScreenActivity.T1_SCORE, score1);
             doneData.putExtra(TitleScreenActivity.T2_SCORE, score2);
-
             doneData.putExtra(TitleScreenActivity.SW_WORD,sw_word );
             doneData.putExtra(TitleScreenActivity.LW_WORD, lw_word);
-            doneData.putExtra(TitleScreenActivity.SW_TEAM,sw_team);
-            doneData.putExtra(TitleScreenActivity.LW_TEAM,lw_team);
             doneData.putExtra(TitleScreenActivity.HSR_TEAM, hsr_team);
             doneData.putExtra(TitleScreenActivity.SW_TIME,sw_time);
             doneData.putExtra(TitleScreenActivity.LW_TIME, lw_time);
             doneData.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
             doneData.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
-
+            doneData.putExtra(TitleScreenActivity.CORRECT_COUNT1, correct_count1);
+            doneData.putExtra(TitleScreenActivity.CORRECT_COUNT2, correct_count2);
+            doneData.putExtra(TitleScreenActivity.PASS_COUNT1, pass_count1);
+            doneData.putExtra(TitleScreenActivity.PASS_COUNT2, pass_count2);
 
             startActivity(doneData);
         }
@@ -129,12 +130,12 @@ public class InGameActivity extends Activity {
             sendData.putExtra(TitleScreenActivity.ROUNDS_LEFT, roundsLeft - 1);
             if (teamNum == 2) teamNum = 1;
             else teamNum = 2;
+            sendData.putExtra(TitleScreenActivity.TIME, time);
             sendData.putExtra(TitleScreenActivity.NEXT_UP, teamNum);
             sendData.putExtra(TitleScreenActivity.T1_SCORE, score1);
             sendData.putExtra(TitleScreenActivity.T2_SCORE, score2);
             sendData.putExtra(TitleScreenActivity.SW_WORD,sw_word);
             sendData.putExtra(TitleScreenActivity.LW_WORD,lw_word);
-            sendData.putExtra(TitleScreenActivity.SW_TEAM,sw_team);
             sendData.putExtra(TitleScreenActivity.SW_TIME,sw_time);
             sendData.putExtra(TitleScreenActivity.LW_TIME,lw_time);
             sendData.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
@@ -164,11 +165,9 @@ public class InGameActivity extends Activity {
         if (temp < sw_time) {
             sw_time = temp;
             sw_word = words[randNum];
-            sw_team = teamNum;
         } else if (temp > lw_time) {
             lw_time = temp;
             lw_word = words[randNum];
-            lw_team = teamNum;
         }
 
         startTime = endTime;
@@ -182,7 +181,7 @@ public class InGameActivity extends Activity {
         t5Text.setText(taboo5[randNum]);
     }
 
-    public void Statistics(View view)
+   /* public void Statistics(View view)
     {
         Intent send_stats = new Intent(this, WinnerScreenActivity.class);
         send_stats.putExtra(TitleScreenActivity.SW_TIME, sw_time);
@@ -198,6 +197,7 @@ public class InGameActivity extends Activity {
 
 
     }
+    */
     //make a passing timer/set number of pass
 
 }

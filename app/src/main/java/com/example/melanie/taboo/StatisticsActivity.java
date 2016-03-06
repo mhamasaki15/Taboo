@@ -11,9 +11,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class StatisticsActivity extends Activity implements AdapterView.OnItemSelectedListener {
-    private int score1;
-    private int score2;
-
     private double sw_time, lw_time;
     private String sw_word, lw_word;
     private int sw_team, lw_team, hsr_score, hsr_team, hsr_round, pass_count1, correct_count1, pass_count2, correct_count2;
@@ -32,14 +29,10 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         text3 = (TextView)findViewById(R.id.part3);
         text4 = (TextView)findViewById(R.id.part4);
         Intent intent = getIntent();
-        score1 = intent.getIntExtra(TitleScreenActivity.T1_SCORE, 23);
-        score2 = intent.getIntExtra(TitleScreenActivity.T2_SCORE, 24);
         sw_time = intent.getDoubleExtra(TitleScreenActivity.SW_TIME, 1.0);
         lw_time = intent.getDoubleExtra(TitleScreenActivity.LW_TIME, 1.0);
         sw_word = intent.getStringExtra(TitleScreenActivity.SW_WORD);
         lw_word = intent.getStringExtra(TitleScreenActivity.LW_WORD);
-        sw_team = intent.getIntExtra(TitleScreenActivity.SW_TEAM, 1);
-        lw_team = intent.getIntExtra(TitleScreenActivity.LW_TEAM, 1);
         hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
         hsr_round = intent.getIntExtra(TitleScreenActivity.HSR_ROUND, 1);
         hsr_team = intent.getIntExtra(TitleScreenActivity.HSR_TEAM, 1);

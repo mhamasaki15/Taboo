@@ -13,17 +13,15 @@ public class TitleScreenActivity extends AppCompatActivity {
     public static final String T2_SCORE = "2";
     public static final String ROUNDS_LEFT= "6";
     public static final String SW_WORD = "3";
-    public static final String SW_TEAM = "9";
     public static final String SW_TIME = "10";
     public static final String LW_WORD = "11";
-    public static final String LW_TEAM = "12";
     public static final String LW_TIME = "13";
     public static final String HSR_SCORE = "14";
     public static final String HSR_TEAM = "15";
     public static final String HSR_ROUND = "16";
     public static final String NAME1 = "1";
     public static final String NAME2 = "2";
-    public static final String Time = "60";
+    public static final String TIME = "60";
     public static final String PASS_ARRAY = "33";
     public static final String PASS_COUNT1 = "34";
     public static final String CORRECT_COUNT1 = "35";
@@ -50,7 +48,7 @@ public class TitleScreenActivity extends AppCompatActivity {
 
     public void sendtoSettingsActivity(View view){
          Intent intent = new Intent(this, SettingsActivity.class);
-        int roundsLeft= 6;
+        /*int roundsLeft= 6;
         intent.putExtra(ROUNDS_LEFT, roundsLeft);
         int team = 1;
         intent.putExtra(NEXT_UP, team);
@@ -82,7 +80,7 @@ public class TitleScreenActivity extends AppCompatActivity {
         intent.putExtra(NAME1,name1);
         intent.putExtra(NAME2,name2);
         intent.putExtra(Time,time );
-
+        */
         startActivity(intent);
     }
 }
