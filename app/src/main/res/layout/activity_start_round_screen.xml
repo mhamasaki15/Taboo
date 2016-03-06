@@ -39,15 +39,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-<<<<<<< HEAD
-        android:text="Next Up: "
         android:id="@+id/next"
-=======
         android:text="Get Ready Team "
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        android:id="@+id/textView"
->>>>>>> origin/master
         android:textSize="30sp"
         android:layout_below="@+id/rounds"
         android:layout_centerHorizontal="true" />
@@ -81,14 +76,9 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="Score 1"
-<<<<<<< HEAD
             android:textSize="30sp"
             android:id="@+id/score1"
-=======
             android:textColor="@android:color/white"
-            android:textSize="50sp"
-            android:id="@+id/textView3"
->>>>>>> origin/master
             android:layout_below="@+id/team1name"
             />
         </LinearLayout>
@@ -109,14 +99,9 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:text="Score 2"
-<<<<<<< HEAD
         android:textSize="30sp"
         android:id="@+id/score2"
-=======
         android:textColor="@android:color/white"
-        android:textSize="50sp"
-        android:id="@+id/textView4"
->>>>>>> origin/master
         android:layout_below="@+id/team2name"
         />
 </LinearLayout>

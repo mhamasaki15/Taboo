@@ -36,7 +36,7 @@ public class StartRoundScreen extends Activity {
         rounds = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 0);
         nextTeam = intent.getIntExtra( TitleScreenActivity.NEXT_UP, 1);
         team1score = intent.getIntExtra( TitleScreenActivity.T1_SCORE, 0);
-<<<<<<< HEAD
+
         team2score = intent.getIntExtra(TitleScreenActivity.T2_SCORE, 0);
         SW_WORD = intent.getStringExtra(TitleScreenActivity.SW_WORD);
         SW_TIME = intent.getDoubleExtra(TitleScreenActivity.SW_TIME, 0.0);
@@ -47,21 +47,13 @@ public class StartRoundScreen extends Activity {
         HSR_SCORE = intent.getIntExtra(TitleScreenActivity.HSR_SCORE,0);
         HSR_TEAM = intent.getIntExtra(TitleScreenActivity.HSR_TEAM,0);
         HSR_ROUND = intent.getIntExtra(TitleScreenActivity.HSR_ROUND,0);
-        TextView next = (TextView) findViewById(R.id.next   );
+        TextView next = (TextView) findViewById(R.id.next);
         TextView left = (TextView) findViewById(R.id.rounds);
         TextView score1 = (TextView) findViewById(R.id.score1);
         TextView score2 = (TextView) findViewById(R.id.score2);
-        next.setText("Next Up: " + nextTeam);
-        left.setText("Rounds Left: " + rounds);
-=======
-        team2score = intent.getIntExtra( TitleScreenActivity.T2_SCORE, 0);
-        TextView next = (TextView) findViewById(R.id.textView);
-        TextView left = (TextView) findViewById(R.id.textView2);
-        TextView score1 = (TextView) findViewById(R.id.textView3);
-        TextView score2 = (TextView) findViewById(R.id.textView4);
+        team2score = intent.getIntExtra( TitleScreenActivity.T2_SCORE, 0);;
         next.setText("GET READY Team " + nextTeam);
         left.setText("ROUNDS LEFT: " + rounds);
->>>>>>> origin/master
         score1.setText("" + team1score);
         score2.setText("" + team2score);
 
