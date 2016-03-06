@@ -66,13 +66,13 @@ public class WinnerScreenActivity extends Activity {
         startActivity(restart);
     }
 
-    public void nah()
+    public void nah(View view)
     {
         Intent nope = new Intent(this, TitleScreenActivity.class);
         startActivity(nope);
 
     }
-    public void stats()
+    public void stats(View view)
     {
         Intent send_stats = new Intent(this, StatisticsActivity.class);
         send_stats.putExtra(TitleScreenActivity.T1_SCORE,score1);
