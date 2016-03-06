@@ -36,7 +36,7 @@
         android:layout_height="60dp"
         android:text="Statistics"
         android:textSize="30dp"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="#606060"
         android:background="#FEC803"
         android:id="@+id/statistics"
         android:onClick="stats"

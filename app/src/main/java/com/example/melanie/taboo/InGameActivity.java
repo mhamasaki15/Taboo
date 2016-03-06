@@ -88,12 +88,11 @@ public class InGameActivity extends Activity {
 
         startTime = (System.currentTimeMillis() / 1000.0);
 
-<<<<<<< HEAD
-        new CountDownTimer((time + 1100), 1000)
-=======
-        new CountDownTimer((time*1000 + 2500), 1000)
->>>>>>> origin/master
-        {
+
+
+        new CountDownTimer((time + 2500), 1000){
+
+
             public void onTick(long millisUntilFinished)
             {
                 timer.setText(""+ (millisUntilFinished / 1000 - 1));
