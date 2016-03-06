@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer-array name="firstIndices">
-        <item>0</item>
-        <item>10</item>
-        <item>20</item>
-    </integer-array>
     <string-array name="mainWord">
         <item>Refriderator</item>
         <item>Kansas</item>
@@ -35,8 +30,51 @@
         <item>outlet</item>
         <item>queue</item>
         <item>Wizard</item>
-        <item>Pop9</item>
-        <item>Pop10</item>
+
+        <item>beer bong</item>
+        <item>writing 150</item>
+        <item>Viterbi</item>
+        <item>Cinematic Arts</item>
+        <item>VKC</item>
+        <item>Parkside</item>
+        <item>CS 104</item>/
+        <item>The Row</item>
+        <item>YikYak</item>
+        <item>Doheny</item>
+        <item>Campus Cruiser</item>
+        <item>drought</item>
+        <item>UCLA</item>
+        <item>Traveler</item>
+        <item>Trojans</item>
+        <item>Fight On!</item>
+        <item>Hoverboard</item>
+        <item>Coliseum</item>
+        <item>Midterms</item>
+        <item>EVKitty</item>
+        <item>SGM</item>
+        <item>parkside construction</item>
+        <item>Cafe 84</item>
+        <item>Undergraduate</item>
+
+        <item>Kanye West</item>/
+        <item>Beyonce</item>
+        <item>Leonardo DiCaprio</item>/
+        <item>Martha Stewart</item>
+        <item>Adele</item>
+        <item>Dance Moms</item>
+        <item>South Park</item>
+        <item>Kim Kardashian</item>
+        <item>Ken Jennings</item>
+
+        <item>Ben Carson</item>
+        <item>Hillary Clinton</item>/
+        <item>Donald Trump</item>/
+        <item>Marco Rubio</item>
+        <item>Martin O'Malley</item>
+        <item>Bernie Sanders</item>
+        <item>Carly Fiorina</item>/
+
+
     </string-array>
 
     <string-array name="Taboo1">
@@ -69,7 +107,51 @@
         <item>power</item>
         <item>FIFO</item>
         <item>Harry</item>
-        <item>Pop10</item>
+
+        <item>red solo cup</item>
+        <item>freshman</item>
+        <item>engineering</item>
+        <item>George Lucas</item>
+        <item>flags</item>
+        <item>dining hall </item>
+        <item>class </item>
+        <item>frat</item>
+        <item>app</item>
+        <item>library</item>
+        <item>free</item>
+        <item>water</item>
+        <item>garbage</item>
+        <item>horse</item>
+        <item>sports</item>
+        <item>spirit</item>
+        <item>band</item>
+        <item>stadium</item>
+        <item>semester</item>
+        <item>cat</item>
+        <item>rooftop</item>
+        <item>unwanted</item>
+        <item>dining hall </item>
+        <item>freshmen</item>
+
+        <item>Imma let you finish</item>
+        <item>illuminati</item>
+        <item>Oscars</item>
+        <item>Jail</item>
+        <item>Hello</item>
+        <item>drama</item>
+        <item>North</item>
+        <item>Butt</item>
+        <item>Hero</item>
+
+        <item>Detroit</item>
+        <item>woman</item>
+        <item>tells it like it is</item>
+        <item>Cuban</item>
+        <item>cartoon</item>
+        <item>socialism</item>
+        <item>Hillary</item>
+
+
     </string-array>
 
     <string-array name="Taboo2">
@@ -102,7 +184,48 @@
         <item>cord</item>
         <item>LinkedList</item>
         <item>30</item>
-        <item>Pop10</item>
+
+        <item>ball</item>
+        <item>essay</item>
+        <item>male</item>
+        <item>Steven Speilberg</item>
+        <item>Globe</item>
+        <item>South</item>
+        <item>Object Oriented</item>
+        <item>Fiji</item>
+        <item>social media </item>
+        <item>study</item>
+        <item>car</item>
+        <item>rain</item>
+        <item>Bruins</item>
+        <item>mascot</item>
+        <item>football</item>
+        <item>test</item>
+        <item>dining hall</item>
+        <item>Chemistry</item>
+        <item>fire pits</item>
+        <item>food</item>
+        <item>Sophomore</item>
+
+        <item>52 Million</item>
+        <item>Queen B</item>
+        <item>The Revenant</item>
+        <item>Felon</item>
+        <item>It's Me</item>
+        <item>reality TV</item>
+        <item>Cartman</item>
+        <item>famous</item>
+        <item>Jeopardy</item>
+
+        <item>surgeon</item>/
+        <item>untrustworthy</item>
+        <item>The Apprentice</item>
+        <item>small hands</item>
+        <item>bear</item>
+        <item>hippie</item>
+        <item>HP</item>
+
+
     </string-array>
 
     <string-array name="Taboo3">
@@ -135,73 +258,207 @@
         <item>electricity</item>
         <item>British</item>
         <item>Hagrid</item>
-        <item>Pop10</item>
+
+        <item>party</item>
+        <item>office hours</item>
+        <item>school</item>
+        <item>money</item>
+        <item>buildings</item>
+        <item>darkside</item>
+        <item>programming</item>
+        <item>beta</item>
+        <item>anonymous</item>
+        <item>leavey</item>
+        <item>transportation</item>
+        <item>California</item>
+        <item>school</item>
+        <item>Instagram</item>
+        <item>Tommy</item>
+        <item>saying</item>
+        <item>fire hazard</item>
+        <item>South</item>
+        <item>classes</item>
+        <item>lives</item>
+        <item>building</item>
+        <item>winter break</item>
+        <item>Hipster</item>
+        <item>Junior</item>
+
+        <item>Tidal</item>
+        <item>Partition</item>
+        <item>Titanic</item>
+        <item>cakes</item>
+        <item>cockney</item>
+        <item>Abby</item>/
+        <item>Kenny</item>
+        <item>break the internet</item>
+        <item>Roman Numerals</item>
+
+        <item>brain</item>
+        <item>Bill Clinton</item>
+        <item>small loan</item>
+        <item>guy</item>
+        <item>who</item>
+        <item>free</item>
+        <item>CEO</item>
+
+
     </string-array>
 
     <string-array name="Taboo4">
-        <item>Basic1</item>
-        <item>Basic2</item>
-        <item>Basic3</item>
-        <item>Basic4</item>
-        <item>Basic5</item>
-        <item>Basic6</item>
-        <item>Basic7</item>
-        <item>Basic8</item>
-        <item>Basic9</item>
-        <item>Basic10</item>
-        <item>USC1</item>
-        <item>USC2</item>
-        <item>USC3</item>
-        <item>USC4</item>
-        <item>USC5</item>
-        <item>USC6</item>
-        <item>USC7</item>
-        <item>USC8</item>
-        <item>USC9</item>
-        <item>USC10</item>
-        <item>Pop1</item>
-        <item>Pop2</item>
-        <item>Pop3</item>
-        <item>Pop4</item>
-        <item>Pop5</item>
-        <item>Pop6</item>
-        <item>Pop7</item>
-        <item>Pop8</item>
-        <item>Pop9</item>
-        <item>Pop10</item>
+        <item>kitchen</item>
+        <item>Emerald City</item>
+        <item>FaceTime</item>
+        <item>tax exemption</item>
+        <item>Mexican</item>
+        <item>waste</item>
+        <item>suck</item>
+        <item>fraternal</item>
+        <item>gap</item>
+        <item>office</item>
+        <item>swivel</item>
+        <item>base</item>
+        <item>baked</item>
+        <item>marsh</item>
+        <item>WASD</item>
+        <item>Tennessee</item>
+        <item>Firefox</item>
+        <item>heart</item>
+        <item>incentive</item>
+        <item>drop</item>
+        <item>paint bucket</item>
+        <item>wipe</item>
+        <item>rain forest</item>
+        <item>shapes</item>
+        <item>fast</item>
+        <item>circus</item>
+        <item>wall</item>
+        <item>stack</item>
+        <item>Oz</item>
+
+        <item>throw</item>
+        <item>all nighter</item>
+        <item>introverted</item>
+        <item>film</item>
+        <item>library</item>
+        <item>dorm</item>
+        <item>data</item>
+        <item>sorority</item>
+        <item>drama</item>
+        <item>ceilings</item>
+        <item>pick up</item>
+        <item>dry</item>
+        <item>lame</item>
+        <item>white</item>
+        <item>team</item>
+        <item>V</item>
+        <item>crash</item>
+        <item>seating</item>
+        <item>finals</item>
+        <item>animal</item>
+        <item>exams</item>
+        <item>end of february</item>
+        <item>healthy</item>
+        <item>Senior</item>
+
+        <item>Kim Kardashian</item>
+        <item>Single Ladies</item>
+        <item>Catch me if you Can</item>
+        <item>Woman</item>
+        <item>Rolling in the Deep</item>
+        <item>Maddie</item>
+        <item>Cartoon</item>
+        <item>ray j</item>
+        <item>What is?</item>
+
+        <item>small eyes</item>
+        <item>benghazi</item>
+        <item>wall</item>
+        <item>water</item>
+        <item>unknown</item>
+        <item>college tuition</item>
+        <item>Republican</item>
+
+
+
+
     </string-array>
 
     <string-array name="Taboo5">
-        <item>Basic1</item>
-        <item>Basic2</item>
-        <item>Basic3</item>
-        <item>Basic4</item>
-        <item>Basic5</item>
-        <item>Basic6</item>
-        <item>Basic7</item>
-        <item>Basic8</item>
-        <item>Basic9</item>
-        <item>Basic10</item>
-        <item>USC1</item>
-        <item>USC2</item>
-        <item>USC3</item>
-        <item>USC4</item>
-        <item>USC5</item>
-        <item>USC6</item>
-        <item>USC7</item>
-        <item>USC8</item>
-        <item>USC9</item>
-        <item>USC10</item>
-        <item>Pop1</item>
-        <item>Pop2</item>
-        <item>Pop3</item>
-        <item>Pop4</item>
-        <item>Pop5</item>
-        <item>Pop6</item>
-        <item>Pop7</item>
-        <item>Pop8</item>
-        <item>Pop9</item>
-        <item>Pop10</item>
+        <item>chill</item>
+        <item>Yellow Brick Road</item>
+        <item>apps</item>
+        <item>religion</item>
+        <item>weeds</item>
+        <item>dispose</item>
+        <item>red and white</item>
+        <item>same</item>
+        <item>disney movie</item>
+        <item>processing</item>
+        <item>sit</item>
+        <item>scheme</item>
+        <item>breakfast</item>
+        <item>Shrek</item>
+        <item>sky</item>
+        <item>Indiana</item>
+        <item>Internet</item>
+        <item>round</item>
+        <item>criminal</item>
+        <item>music</item>
+        <item>no parents</item>
+        <item>pushover</item>
+        <item>river</item>
+        <item>color</item>
+        <item>Pokemon</item>
+        <item>1</item>
+        <item>fork</item>
+        <item>line</item>
+        <item>magic</item>
+
+        <item>alcohol</item>
+        <item>class</item>
+        <item>math and science</item>
+        <item>nice buildings</item>
+        <item>classrooms</item>
+        <item>residents</item>
+        <item>structures</item>
+        <item>male</item>
+        <item>campus</item>
+        <item>sleeping</item>
+        <item>Uber</item>
+        <item>heat</item>
+        <item>rival</item>
+        <item>statue</item>
+        <item>peace</item>
+        <item>transportation</item>
+        <item>watch</item>
+        <item>study</item>
+        <item>building</item>
+        <item>tall</item>
+        <item>unfinished</item>
+        <item>King</item>
+        <item>degree</item>
+
+        <item>shoes</item>
+        <item>redLobster</item>
+        <item>Django</item>
+        <item>blonde</item>/
+        <item>Someone Like You</item>/
+        <item>competitions</item>
+        <item>TV</item>
+        <item>Caetlyn Jenner</item>
+        <item>rekt</item>
+
+        <item>pediatric</item>
+        <item>emails</item>
+        <item>tupee</item>
+        <item>Republican</item>
+        <item>Democrat</item>
+        <item>welfare</item>
+        <item>woman</item>
+
+
+
     </string-array>
 
     <string-array name="stats_array">
