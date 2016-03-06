@@ -48,7 +48,7 @@ public class TitleScreenActivity extends AppCompatActivity {
 
     public void sendtoSettingsActivity(View view){
          Intent intent = new Intent(this, SettingsActivity.class);
-       /* int roundsLeft= 6;
+        int roundsLeft= 6;
         intent.putExtra(ROUNDS_LEFT, roundsLeft);
         int team = 1;
         intent.putExtra(NEXT_UP, team);
@@ -79,7 +79,7 @@ public class TitleScreenActivity extends AppCompatActivity {
         intent.putExtra(HSR_ROUND,high_round);
         intent.putExtra(NAME1,name1);
         intent.putExtra(NAME2,name2);
-        intent.putExtra(Time,time ); */
+        intent.putExtra(Time,time );
 
         startActivity(intent);
     }
