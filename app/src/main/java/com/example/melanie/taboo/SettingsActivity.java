@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class SettingsActivity extends Activity implements AdapterView.OnItemSelectedListener {
     private int rounds;
-    private double time;
+    private int time;
     private String team1;
     private String team2;
 
@@ -30,6 +30,8 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner2.setAdapter(adapter2);
+        spinner.setOnItemSelectedListener(this);
+        spinner2.setOnItemSelectedListener(this);
         EditText name1 = (EditText) findViewById(R.id.Team1Name);
         EditText name2 = (EditText) findViewById(R.id.Team2Name);
         name1.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -121,7 +123,7 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         int high_score = 0;
         int team1Score = 0;
         Intent ret = new Intent(this, StartRoundScreen.class);
-        ret.putExtra(TitleScreenActivity.ROUNDS_LEFT,rounds);
+        ret.putExtra(TitleScreenActivity.ROUNDS_LEFT, rounds);
         ret.putExtra(TitleScreenActivity.NAME1, team1);
         ret.putExtra(TitleScreenActivity.NAME2, team2);
         ret.putExtra(TitleScreenActivity.T2_SCORE, team2Score);

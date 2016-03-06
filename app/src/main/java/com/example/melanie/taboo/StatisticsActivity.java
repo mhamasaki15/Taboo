@@ -16,7 +16,7 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
 
     private double sw_time, lw_time;
     private String sw_word, lw_word;
-    private int sw_team, lw_team, hsr_score, hsr_team, hsr_round;
+    private int sw_team, lw_team, hsr_score, hsr_team, hsr_round, pass_count, correct_count;
 
     private ArrayAdapter myArrayAdapter;
     private ListView myListView;
@@ -43,11 +43,13 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
         hsr_round = intent.getIntExtra(TitleScreenActivity.HSR_ROUND, 1);
         hsr_team = intent.getIntExtra(TitleScreenActivity.HSR_TEAM, 1);
-
+        pass_count = intent.getIntExtra(TitleScreenActivity.PASS_COUNT, 0);
+        correct_count = intent.getIntExtra(TitleScreenActivity.PASS_COUNT, 0);
 
         myListView = (ListView)findViewById(R.id.passedList);
-        Bundle b = intent.getBundleExtra(TitleScreenActivity.PASS_ARRAY);
-        String[] passArray = b.getStringArray(TitleScreenActivity.PASS_ARRAY);
+        //Bundle b = intent.getBundleExtra(TitleScreenActivity.PASS_ARRAY);
+        //String[] passArray = b.getStringArray(TitleScreenActivity.PASS_ARRAY);
+        String[] passArray = {"nice", "memes", "bro", "yeah"};
         myArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, passArray);
         myListView.setAdapter(myArrayAdapter);
         myListView.setVisibility(View.INVISIBLE);
