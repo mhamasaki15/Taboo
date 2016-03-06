@@ -67,12 +67,12 @@
         <item>Ken Jennings</item>
 
         <item>Ben Carson</item>
-        <item>Hillary Clinton</item>/
-        <item>Donald Trump</item>/
+        <item>Hillary Clinton</item>
+        <item>Donald Trump</item>
         <item>Marco Rubio</item>
-        <item>Martin O'Malley</item>
+        <item>Martin O\'Malley</item>
         <item>Bernie Sanders</item>
-        <item>Carly Fiorina</item>/
+        <item>Carly Fiorina</item>
 
 
     </string-array>
@@ -211,7 +211,7 @@
         <item>Queen B</item>
         <item>The Revenant</item>
         <item>Felon</item>
-        <item>It's Me</item>
+        <item>It\'s Me</item>
         <item>reality TV</item>
         <item>Cartman</item>
         <item>famous</item>

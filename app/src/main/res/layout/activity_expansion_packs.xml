@@ -37,31 +37,36 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ExpansionPack1"
+            android:text="USC"
+            android:id="@+id/uscBox"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="#FFC2185B"
             android:textStyle="italic"
+            android:onClick="onCheckBoxClicked"
             android:textSize="35dp"/>
         <CheckBox
+            android:id="@+id/popBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ExpansionPack2"
+            android:text="Pop Culture"
             android:textColor="#FFC2185B"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="10dp"
+            android:onClick="onCheckboxClicked"
             android:textStyle="italic"
 
             android:textSize="35dp"/>
         <CheckBox
+            android:id="@+id/presBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ExpansionPack3"
+            android:text="Presidential Candidates 2016"
             android:textStyle="italic"
             android:textColor="#FFC2185B"
             android:layout_marginLeft="30dp"
-
+            android:onClick="onCheckBoxClicked"
             android:textSize="35dp"/>
         <Button
             android:layout_width="300dp"
