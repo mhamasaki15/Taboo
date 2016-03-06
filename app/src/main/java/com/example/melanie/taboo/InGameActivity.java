@@ -58,11 +58,11 @@ public class InGameActivity extends Activity {
         t3Text.setText(taboo3[randNum]);
         t4Text.setText(taboo4[randNum]);
         t5Text.setText(taboo5[randNum]);
-        new CountDownTimer(600000,1000)
+        new CountDownTimer(500,1000)
         {
             public void onTick(long millisUntilFinished)
             {
-                timer.setText(""+millisUntilFinished / 1000);
+                timer.setText(""+ (millisUntilFinished / 1000 - 2));
             }
             public void onFinish()
             {
@@ -73,16 +73,46 @@ public class InGameActivity extends Activity {
     }
 
     public void roundOver(View view){
-        Intent sendData = new Intent(this, StartRoundScreen.class);
-        sendData.putExtra(TitleScreenActivity.ROUNDS_LEFT, roundsLeft-1);
-        if (teamNum == 2) teamNum = 1;
-        else teamNum = 2;
-        sendData.putExtra(TitleScreenActivity.NEXT_UP, teamNum);
-        sendData.putExtra(TitleScreenActivity.T1_SCORE, score1);
-        sendData.putExtra(TitleScreenActivity.T2_SCORE, score2);
-        startActivity(sendData);
 
-
+        if (roundsLeft == 0) {
+            Intent doneData = new Intent(this, WinnerScreenActivity.class);
+            doneData.putExtra(TitleScreenActivity.T1_SCORE, score1);
+            doneData.putExtra(TitleScreenActivity.T2_SCORE, score2);
+            startActivity(doneData);
+        }
+        else {
+            Intent sendData = new Intent(this, StartRoundScreen.class);
+            sendData.putExtra(TitleScreenActivity.ROUNDS_LEFT, roundsLeft - 1);
+            if (teamNum == 2) teamNum = 1;
+            else teamNum = 2;
+            sendData.putExtra(TitleScreenActivity.NEXT_UP, teamNum);
+            sendData.putExtra(TitleScreenActivity.T1_SCORE, score1);
+            sendData.putExtra(TitleScreenActivity.T2_SCORE, score2);
+            startActivity(sendData);
+        }
     }
+
+    public void passWord(View view){
+        int randNum = rgenerator.nextInt(words.length);
+        mwText.setText(words[randNum]);
+        t1Text.setText(taboo1[randNum]);
+        t2Text.setText(taboo2[randNum]);
+        t3Text.setText(taboo3[randNum]);
+        t4Text.setText(taboo4[randNum]);
+        t5Text.setText(taboo5[randNum]);
+    }
+
+    public void correctWord(View view){
+        if (teamNum == 2) score2++;
+        else score1++;
+        int randNum = rgenerator.nextInt(words.length);
+        mwText.setText(words[randNum]);
+        t1Text.setText(taboo1[randNum]);
+        t2Text.setText(taboo2[randNum]);
+        t3Text.setText(taboo3[randNum]);
+        t4Text.setText(taboo4[randNum]);
+        t5Text.setText(taboo5[randNum]);
+    }
+    //make a passing timer/set number of pass
 
 }
