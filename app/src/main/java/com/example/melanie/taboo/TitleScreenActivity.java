@@ -72,4 +72,9 @@ public class TitleScreenActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+    public void sendtoSettingActivity(View view)
+    {
+        Intent send = new Intent(this, SettingsActivity.class);
+        startActivity(send);
+    }
 }
