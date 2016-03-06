@@ -36,7 +36,7 @@ public class WinnerScreenActivity extends Activity {
         }
         else
         {
-            winner.setText("Tie game!");
+            winner.setText("Tie Game!");
             //maybe include coin flip?
         }
 
