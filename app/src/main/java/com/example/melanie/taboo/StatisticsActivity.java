@@ -56,11 +56,19 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         if (pos == 0){
             text1.setText(R.string.fastestguess1);
             text2.setText(sw_word);
-            text3.setText(R.string.team + "teamPlaceholder" + R.string.fastestguess3);
+            text3.setText(R.string.team + "teamPlaceholder" + R.string.guessed);
             text4.setText(String.valueOf(sw_time) + R.string.seconds);
+        }
+        else if (pos == 1){
+            text1.setText(R.string.slowestguess1);
+            text2.setText(lw_word);
+            text3.setText(R.string.team + "teamPlaceHolder" + R.string.guessed);
+            text4.setText(String.valueOf(lw_time) + R.string.seconds);
         }
         // An item was selected. You can retrieve the selected item using
         // parent.getItemAtPosition(pos)
+
+        //head to head graph
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
