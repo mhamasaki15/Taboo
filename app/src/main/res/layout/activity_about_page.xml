@@ -7,12 +7,48 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#05B198"
+    android:orientation="vertical"
+
     tools:context="com.example.melanie.taboo.AboutPageActivity">
 
-    <TextView
+    <TextView android:id="@+id/titleAbout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="These are the badass motherfuckers who made this game"
+        android:text="BadAss Motherf**kers"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textStyle="bold"
         />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleAbout"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <ImageView android:id="@+id/melpic"
+
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/mel"/>
+    <ImageView android:id="@+id/itgetsbetter"
+        android:layout_below="@+id/melpic"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/tony"/>
+    <ImageView
+        android:layout_below="@+id/itgetsbetter"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/thebest"/>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
