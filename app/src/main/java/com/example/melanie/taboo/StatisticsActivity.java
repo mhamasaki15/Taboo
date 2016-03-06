@@ -95,10 +95,10 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         }
         else if (pos == 4){
             double t1P = 100.0*(double)correct_count1/(pass_count1+correct_count1);
-            text1.setText("Team " + ":");
+            text1.setText("Team " + name1 +":");
             text2.setText(String.format("%.2f", t1P) + "%\n");
             double t2P = 100.0*(double)correct_count2/(pass_count2+correct_count2);
-            text3.setText("Team " + "teamPlaceHolder:");
+            text3.setText("Team " + name2 + ":");
             text4.setText(String.format("%.2f", t2P) + "%\n");
 
         }
