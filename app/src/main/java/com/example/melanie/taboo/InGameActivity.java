@@ -36,15 +36,15 @@ public class InGameActivity extends Activity {
 
         Intent intent = getIntent();
 
-        sw_time = intent.getIntExtra(SW_TIME, 1.0);
-        lw_time = intent.getIntExtra(LW_TIME, 1.0);
-        sw_word = intent.getStringExtra(SW_WORD, "");
-        lw_word = intent.getStringExtra(LW_WORD, "");
-        sw_team = intent.getIntExtra(SW_TEAM, 1);
-        lw_team = intent.getIntExtra(LW_TEAM, 1);
-        hsr_score = intent.getIntExtra(HSR_SCORE, 1);
-        hsr_round = intent.getIntExtra(HSR_ROUND, 1);
-        hsr_team = intent.getIntExtra(HSR_TEAM, 1);
+        sw_time = intent.getIntExtra(TitleScreenActivity.SW_TIME, 1.0);
+        lw_time = intent.getIntExtra(TitleScreenActivity.LW_TIME, 1.0);
+        sw_word = intent.getStringExtra(TitleScreenActivity.SW_WORD, "");
+        lw_word = intent.getStringExtra(TitleScreenActivity.LW_WORD, "");
+        sw_team = intent.getIntExtra(TitleScreenActivity.SW_TEAM, 1);
+        lw_team = intent.getIntExtra(TitleScreenActivity.LW_TEAM, 1);
+        hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
+        hsr_round = intent.getIntExtra(TitleScreenActivity.HSR_ROUND, 1);
+        hsr_team = intent.getIntExtra(TitleScreenActivity.HSR_TEAM, 1);
 
         roundsLeft = intent.getIntExtra(TitleScreenActivity.ROUNDS_LEFT, 21);
         teamNum = intent.getIntExtra(TitleScreenActivity.NEXT_UP, 22);
