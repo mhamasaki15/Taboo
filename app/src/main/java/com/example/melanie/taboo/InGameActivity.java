@@ -21,7 +21,7 @@ public class InGameActivity extends Activity {
     private double startTime, endTime;
     private double sw_time, lw_time;
     private String sw_word, lw_word;
-    private int sw_team, lw_team, hsr_score, hsr_team, hsr_round;
+    private int sw_team, lw_team, hsr_score, hsr_team, hsr_round,time;
 
     private Resources res;
     private int roundsLeft, teamNum, score1, score2, randNum;
@@ -50,6 +50,7 @@ public class InGameActivity extends Activity {
         teamNum = intent.getIntExtra(TitleScreenActivity.NEXT_UP, 22);
         score1 = intent.getIntExtra(TitleScreenActivity.T1_SCORE, 23);
         score2 = intent.getIntExtra(TitleScreenActivity.T2_SCORE, 24);
+        time = intent.getIntExtra(TitleScreenActivity.Time, 60);
 
         res = getResources();
         words = res.getStringArray(R.array.mainWord);
@@ -77,7 +78,7 @@ public class InGameActivity extends Activity {
 
         startTime = (System.currentTimeMillis() / 1000.0);
 
-        new CountDownTimer(620,1000)
+        new CountDownTimer((time*1000 + 2000),1000)
         {
             public void onTick(long millisUntilFinished)
             {
