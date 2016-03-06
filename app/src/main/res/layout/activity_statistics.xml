@@ -43,4 +43,14 @@
         android:id="@+id/part3"
         android:textAlignment="center"
         android:layout_below="@id/part2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/part4"
+        android:textAlignment="center"
+        android:layout_below="@+id/part3"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

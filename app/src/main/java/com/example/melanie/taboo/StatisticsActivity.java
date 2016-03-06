@@ -17,7 +17,7 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
     private String sw_word, lw_word;
     private int sw_team, lw_team, hsr_score, hsr_team, hsr_round;
 
-    private TextView text1, text2, text3;
+    private TextView text1, text2, text3, text4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         text1 = (TextView)findViewById(R.id.part1);
         text2 = (TextView)findViewById(R.id.part2);
         text3 = (TextView)findViewById(R.id.part3);
-
+        text4 = (TextView)findViewById(R.id.part4);
         Intent intent = getIntent();
         score1 = intent.getIntExtra(TitleScreenActivity.T1_SCORE, 23);
         score2 = intent.getIntExtra(TitleScreenActivity.T2_SCORE, 24);
@@ -40,11 +40,6 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
         hsr_round = intent.getIntExtra(TitleScreenActivity.HSR_ROUND, 1);
         hsr_team = intent.getIntExtra(TitleScreenActivity.HSR_TEAM, 1);
-
-        /*
-
-
-         */
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
@@ -59,7 +54,10 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         if (pos == 0){
-
+            text1.setText(R.string.fastestguess1);
+            text2.setText(sw_word);
+            text3.setText(R.string.team + "teamPlaceholder" + R.string.fastestguess3);
+            text4.setText(String.valueOf(sw_time) + R.string.seconds);
         }
         // An item was selected. You can retrieve the selected item using
         // parent.getItemAtPosition(pos)
