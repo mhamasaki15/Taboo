@@ -7,11 +7,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="com.example.melanie.taboo.StartRoundScreen">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+<Button
+        android:layout_width="300dp"
+        android:layout_height="70dp"
         android:text="START ROUND"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
@@ -19,6 +20,17 @@
         android:layout_marginBottom="167dp"
         android:onClick="RoundScreen"/>
 
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/textView2"
+        android:textSize="30sp"
+        android:text="Rounds Left: "
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
     <TextView
         android:layout_width="200dp"
         android:layout_height="50dp"
@@ -26,34 +38,62 @@
         android:id="@+id/textView"
         android:textSize="30sp"
         android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_centerHorizontal="true" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/teamnames"
+    android:layout_below="@id/textView"
+    android:orientation="horizontal"
+    android:layout_centerHorizontal="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
 
     <TextView
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEAM 1"
+        android:paddingRight="30dp"
         android:textSize="30sp"
-        android:text="Rounds left: "
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp" />
+        android:id="@+id/team1name"
 
+         />
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="Score 1"
+            android:textSize="30sp"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/team1name"
+            />
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEAM 2"
+        android:textSize="30sp"
+        android:id="@+id/team2name"
+         />
     <TextView
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="SCORE"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
-    <TextView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:text="SCORE"
+        android:text="Score 2"
+        android:textSize="30sp"
         android:id="@+id/textView4"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_below="@+id/team2name"
+        />
+</LinearLayout>
+
+</LinearLayout>
+
 </RelativeLayout>

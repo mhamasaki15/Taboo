@@ -30,24 +30,27 @@ public class StartRoundScreen extends Activity {
         TextView left = (TextView) findViewById(R.id.textView2);
         TextView score1 = (TextView) findViewById(R.id.textView3);
         TextView score2 = (TextView) findViewById(R.id.textView4);
-        next.setText("Next up: " + nextTeam);
+        next.setText("Next Up: " + nextTeam);
         left.setText("Rounds Left: " + rounds);
-        score1.setText("Team 1: " + team1score);
-        score2.setText("Team 2: " + team2score);
+        score1.setText("" + team1score);
+        score2.setText("" + team2score);
 
 
     }
 
     public void RoundScreen(View view) {
         Intent send = new Intent(this, InGameActivity.class);
+
         send.putExtra(TitleScreenActivity.T1_SCORE, team1score);
         send.putExtra(TitleScreenActivity.T2_SCORE, team2score);
         send.putExtra(TitleScreenActivity.ROUNDS_LEFT, rounds);
         send.putExtra(TitleScreenActivity.NEXT_UP, nextTeam);
+
         send.putExtra("T1_SCORE", team1score);
         send.putExtra("T2_SCORE", team2score);
         send.putExtra("ROUNDS_LEFT", rounds);
         send.putExtra("NEXT_UP",nextTeam);
+
         startActivity(send);
 
 
