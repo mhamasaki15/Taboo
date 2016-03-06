@@ -90,7 +90,7 @@ public class InGameActivity extends Activity {
 
 
 
-        new CountDownTimer((time + 2500), 1000){
+        new CountDownTimer((time*1000 + 2500), 1000){
 
 
             public void onTick(long millisUntilFinished)
