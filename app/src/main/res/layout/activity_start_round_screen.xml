@@ -13,12 +13,13 @@
 <Button
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:text="START ROUND"
+        android:text="START ROUND!"
+        android:textStyle="bold"
         android:textSize="30dp"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="167dp"
+        android:layout_marginBottom="100dp"
         android:onClick="RoundScreen"
         android:background="@android:color/holo_green_light"
     />
@@ -30,12 +31,23 @@
         android:layout_height="50dp"
         android:id="@+id/rounds"
         android:textSize="30sp"
-        android:text="Rounds Left: "
+        android:text="ROUNDS LEFT: "
         android:textStyle="bold"
         android:textColor="@android:color/white"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp" />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_below="@id/rounds"
+        android:id="@+id/getreadytext"
+        android:text="GET READY"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:background="#F3CE41"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -44,7 +56,8 @@
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:layout_below="@+id/rounds"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/getreadytext"
         android:layout_centerHorizontal="true" />
 
 <LinearLayout
