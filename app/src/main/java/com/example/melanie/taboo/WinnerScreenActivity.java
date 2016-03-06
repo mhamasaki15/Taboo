@@ -10,6 +10,15 @@ public class WinnerScreenActivity extends Activity {
 
     public int score1;
     public int score2;
+    private  String SW_WORD = "3";
+    private  int SW_TEAM;
+    private  double SW_TIME;
+    private  String LW_WORD = "11";
+    private  int LW_TEAM;
+    private  double LW_TIME;
+    private  int HSR_SCORE;
+    private  int HSR_TEAM;
+    private  int HSR_ROUND;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +49,25 @@ public class WinnerScreenActivity extends Activity {
         int team1score = 0;
         int team2score = 0;
         restart.putExtra(TitleScreenActivity.T1_SCORE, team1score);
-        restart.putExtra(TitleScreenActivity.T2_SCORE,team2score);
+        restart.putExtra(TitleScreenActivity.T2_SCORE, team2score);
         restart.putExtra(TitleScreenActivity.NEXT_UP, nextTeam);
         restart.putExtra(TitleScreenActivity.ROUNDS_LEFT,rounds);
-        
+
         startActivity(restart);
+    }
+
+    public void nah()
+    {
+        Intent nope = new Intent(this, TitleScreenActivity.class);
+        startActivity(nope);
+
+    }
+    public void stats()
+    {
+        Intent send_stats = new Intent(this, StatisticsActivity.class);
+        send_stats.putExtra(TitleScreenActivity.T1_SCORE,score1);
+        send_stats.putExtra(TitleScreenActivity.T2_SCORE,score2);
+        startActivity(send_stats);
     }
 
 
