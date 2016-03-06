@@ -24,6 +24,7 @@ public class TitleScreenActivity extends AppCompatActivity {
     public static final String NAME1 = "1";
     public static final String NAME2 = "2";
     public static final String Time = "60";
+    public static final String PASS_ARRAY = "33";
 
 
     @Override

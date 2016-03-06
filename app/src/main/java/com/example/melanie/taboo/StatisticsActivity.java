@@ -17,6 +17,7 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
     private String sw_word, lw_word;
     private int sw_team, lw_team, hsr_score, hsr_team, hsr_round;
 
+    private ArrayAdapter myArrayAdapter;
     private TextView text1, text2, text3, text4;
 
     @Override
@@ -40,7 +41,9 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
         hsr_round = intent.getIntExtra(TitleScreenActivity.HSR_ROUND, 1);
         hsr_team = intent.getIntExtra(TitleScreenActivity.HSR_TEAM, 1);
-
+        Bundle b = intent.getBundleExtra(TitleScreenActivity.PASS_ARRAY);
+        
+        myArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, passArray);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.stats_array, android.R.layout.simple_spinner_item);
