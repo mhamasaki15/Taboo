@@ -23,10 +23,10 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         //Intent setting = getIntent();
         Spinner spinner = (Spinner) findViewById(R.id.RoundSelect);
         Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.time_array, android.R.layout.simple_spinner_item);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rounds_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.time_array, R.layout.spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rounds_array, R.layout.spinner_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner2.setAdapter(adapter2);
         spinner.setOnItemSelectedListener(this);
