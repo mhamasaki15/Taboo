@@ -91,6 +91,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="Pass"
+            android:textSize="25dp"
             android:background="#5DC2CC"
             android:onClick="passWord"
             android:id="@+id/passButton" />
@@ -101,6 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Got It!"
+            android:textSize="25dp"
             android:onClick="correctWord"
             android:background="@android:color/holo_green_light"
             android:id="@+id/gotItButton" />

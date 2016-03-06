@@ -80,6 +80,7 @@
             android:textColor="@android:color/white"
             android:textSize="50sp"
             android:textAlignment="center"
+            android:paddingLeft="10dp"
 
 
             android:layout_below="@+id/team1name"
@@ -97,14 +98,15 @@
         android:textColor="@android:color/holo_red_dark"
         android:textSize="30sp"
         android:id="@+id/team2name"
+
          />
     <TextView
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:text="Score 2"
+        android:paddingLeft="10dp"
         android:id="@+id/score2"
         android:textColor="@android:color/white"
-
         android:textSize="50sp"
         android:textAlignment="center"
 
