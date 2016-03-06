@@ -21,6 +21,9 @@ public class TitleScreenActivity extends AppCompatActivity {
     public static final String HSR_SCORE = "14";
     public static final String HSR_TEAM = "15";
     public static final String HSR_ROUND = "16";
+    public static final String NAME1 = "1";
+    public static final String NAME2 = "2";
+    public static final String Time = "60";
 
 
     @Override
@@ -51,6 +54,7 @@ public class TitleScreenActivity extends AppCompatActivity {
         int team2Score = 0;
         double short_time = 61.0;
         double long_time = 0.0;
+        double time = 60.0;
         int sw_team = 1;
         int long_team = 1;
         int hsr_team = 0;
@@ -58,6 +62,7 @@ public class TitleScreenActivity extends AppCompatActivity {
         String long_word = "";
         int high_round = 9;
         int high_score = 0;
+        String name1 = "1", name2 = "2";
 
         intent.putExtra(T2_SCORE, team2Score);
         intent.putExtra(SW_WORD,word );
@@ -69,6 +74,9 @@ public class TitleScreenActivity extends AppCompatActivity {
         intent.putExtra(LW_TIME, long_time);
         intent.putExtra(HSR_SCORE, high_score);
         intent.putExtra(HSR_ROUND,high_round);
+        intent.putExtra(NAME1,name1);
+        intent.putExtra(NAME2,name2);
+        intent.putExtra(Time,time );
 
         startActivity(intent);
     }
