@@ -19,8 +19,8 @@ public class TitleScreenActivity extends AppCompatActivity {
     public static final String HSR_SCORE = "14";
     public static final String HSR_TEAM = "15";
     public static final String HSR_ROUND = "16";
-    public static final String NAME1 = "1";
-    public static final String NAME2 = "2";
+    public static final String NAME1 = "17";
+    public static final String NAME2 = "18";
     public static final String TIME = "60";
     public static final String PASS_ARRAY = "33";
     public static final String PASS_COUNT1 = "34";

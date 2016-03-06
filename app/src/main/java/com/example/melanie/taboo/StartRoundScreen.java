@@ -12,7 +12,7 @@ public class StartRoundScreen extends Activity {
     private int rounds, nextTeam, team1score, team2score, hsr_score, hsr_team, hsr_round, time;
     private  double sw_time, lw_time;
     private int pass_count1, pass_count2, correct_count1, correct_count2;
-    private String sw_word, lw_word;
+    private String sw_word, lw_word, name1, name2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +36,18 @@ public class StartRoundScreen extends Activity {
         pass_count1 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT1, 0);
         correct_count2 = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT2, 0);
         pass_count2 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT2, 0);
+        name1 = intent.getStringExtra(TitleScreenActivity.NAME1);
+        name2 = intent.getStringExtra(TitleScreenActivity.NAME2);
 
         TextView next = (TextView) findViewById(R.id.next);
         TextView left = (TextView) findViewById(R.id.rounds);
         TextView score1 = (TextView) findViewById(R.id.score1);
         TextView score2 = (TextView) findViewById(R.id.score2);
-        team2score = intent.getIntExtra( TitleScreenActivity.T2_SCORE, 0);;
-        next.setText("" + nextTeam);
+
+        String tempName;
+        if (nextTeam == 1) tempName = name1;
+        else tempName = name2;
+        next.setText("Team " + tempName);
         left.setText("ROUNDS LEFT: " + rounds);
         score1.setText("" + team1score);
         score2.setText("" + team2score);
@@ -53,6 +58,8 @@ public class StartRoundScreen extends Activity {
     public void RoundScreen(View view) {
         Intent send = new Intent(this, InGameActivity.class);
 
+        send.putExtra(TitleScreenActivity.NAME1, name1);
+        send.putExtra(TitleScreenActivity.NAME2, name2);
         send.putExtra(TitleScreenActivity.TIME, time);
         send.putExtra(TitleScreenActivity.T1_SCORE, team1score);
         send.putExtra(TitleScreenActivity.T2_SCORE, team2score);

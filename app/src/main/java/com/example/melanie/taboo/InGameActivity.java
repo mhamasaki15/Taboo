@@ -20,7 +20,7 @@ public class InGameActivity extends Activity {
 
     private double startTime, endTime;
     private double sw_time, lw_time;
-    private String sw_word, lw_word;
+    private String sw_word, lw_word, name1, name2;
     private int hsr_score, hsr_team, hsr_round, time, pass_count1, pass_count2, correct_count1, correct_count2;
 
     private Resources res;
@@ -52,6 +52,8 @@ public class InGameActivity extends Activity {
         correct_count2 = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT2, 0);
         pass_count1 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT1, 0);
         pass_count2 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT2, 0);
+        name1 = intent.getStringExtra(TitleScreenActivity.NAME1);
+        name2 = intent.getStringExtra(TitleScreenActivity.NAME2);
 
         res = getResources();
         words = res.getStringArray(R.array.mainWord);
@@ -79,7 +81,7 @@ public class InGameActivity extends Activity {
 
         startTime = (System.currentTimeMillis() / 1000.0);
 
-        new CountDownTimer((time*1000 + 1100), 1000)
+        new CountDownTimer((time*1000 + 2500), 1000)
         {
             public void onTick(long millisUntilFinished)
             {
@@ -120,6 +122,8 @@ public class InGameActivity extends Activity {
             doneData.putExtra(TitleScreenActivity.CORRECT_COUNT2, correct_count2);
             doneData.putExtra(TitleScreenActivity.PASS_COUNT1, pass_count1);
             doneData.putExtra(TitleScreenActivity.PASS_COUNT2, pass_count2);
+            doneData.putExtra(TitleScreenActivity.NAME1, name1);
+            doneData.putExtra(TitleScreenActivity.NAME2, name2);
 
             startActivity(doneData);
         }
@@ -139,6 +143,9 @@ public class InGameActivity extends Activity {
             sendData.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
             sendData.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
             sendData.putExtra(TitleScreenActivity.HSR_TEAM, hsr_team);
+            sendData.putExtra(TitleScreenActivity.NAME1, name1);
+            sendData.putExtra(TitleScreenActivity.NAME2, name2);
+
 
             startActivity(sendData);
         }

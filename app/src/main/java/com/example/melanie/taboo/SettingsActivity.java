@@ -56,7 +56,8 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
             case R.id.spinner2:
                 if (pos == 0) time = 30;
                 else if (pos == 1) time = 60;
-                else if (pos == 2) time = 120;
+                else if (pos == 2) time = 90;
+                else if (pos == 3) time = 120;
                 break;
             case R.id.RoundSelect:
                 if (pos == 0) rounds = 2;
@@ -81,7 +82,7 @@ public class SettingsActivity extends Activity implements AdapterView.OnItemSele
         int hsr_team = 0;
         String long_word = "";
         String short_word = "";
-        int high_round = 9;
+        int high_round = 0;
         int high_score = 0;
         int team1Score = 0;
         Intent ret = new Intent(this, StartRoundScreen.class);

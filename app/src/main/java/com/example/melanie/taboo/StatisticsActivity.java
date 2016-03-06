@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class StatisticsActivity extends Activity implements AdapterView.OnItemSelectedListener {
     private double sw_time, lw_time;
-    private String sw_word, lw_word;
+    private String sw_word, lw_word, name1, name2;
     private int sw_team, lw_team, hsr_score, hsr_team, hsr_round, pass_count1, correct_count1, pass_count2, correct_count2;
 
     private ArrayAdapter myArrayAdapter;
@@ -40,6 +40,8 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
         correct_count1 = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT1, 0);
         pass_count2 = intent.getIntExtra(TitleScreenActivity.PASS_COUNT2, 0);
         correct_count2 = intent.getIntExtra(TitleScreenActivity.CORRECT_COUNT2, 0);
+        name1= intent.getStringExtra(TitleScreenActivity.NAME1);
+        name2 = intent.getStringExtra(TitleScreenActivity.NAME2);
 
         myListView = (ListView)findViewById(R.id.passedList);
         //Bundle b = intent.getBundleExtra(TitleScreenActivity.PASS_ARRAY);
@@ -71,9 +73,12 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
             text4.setText(String.valueOf(lw_time) + "seconds");
         }
         else if (pos == 2){
-            text1.setText("Team " + "teamPlaceHolder\n");
-            text2.setText("had the highest scoring round with\n");
-            text3.setText("");
+            text1.setText("Team ");
+            String tempName;
+            if (hsr_team==1) tempName = name1;
+            else tempName = name2;
+            text2.setText(tempName);
+            text3.setText("had the highest scoring round with\n");
             text4.setText("" + hsr_score + " points");
         }
         else if (pos == 3){
@@ -84,12 +89,12 @@ public class StatisticsActivity extends Activity implements AdapterView.OnItemSe
             myListView.setVisibility(View.VISIBLE);
         }
         else if (pos == 4){
-            double t1P = (double)correct_count1/(pass_count1+correct_count1);
+            double t1P = 100.0*correct_count1/(pass_count1+correct_count1);
             text1.setText("Team " + ":");
-            text2.setText(String.valueOf(t1P) + "%\n");
-            double t2P = (double)correct_count2/(pass_count2+correct_count2);
+            text2.setText(String.format("%.2f", t1P) + "%\n");
+            double t2P = 100.0*(double)correct_count2/(pass_count2+correct_count2);
             text3.setText("Team " + "teamPlaceHolder:");
-            text4.setText(String.valueOf(t2P) + "%\n");
+            text4.setText(String.format("%.2f", t2P) + "%\n");
 
         }
         // An item was selected. You can retrieve the selected item using
