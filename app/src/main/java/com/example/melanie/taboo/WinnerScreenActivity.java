@@ -5,20 +5,19 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
-/* public class WinnerScreenActivity extends Activity {
+public class WinnerScreenActivity extends Activity {
 
-    @Override
     public int score1;
     public int score2;
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winner_screen);
         TextView winner = (TextView) findViewById(R.id.textView5);
         Intent win = getIntent();
-        score1 = win.getIntExtra(InGameActivity.T1_SCORE);
-        score2 = win.getIntExtra(InGameActivity.T2_SCORE);
+        score1 = win.getIntExtra(TitleScreenActivity.T1_SCORE,0);
+        score2 = win.getIntExtra(TitleScreenActivity.T2_SCORE,0);
         if (score1 > score2) {
             winner.setText("Team 1 wins!");
         } else if (score2 > score1)
@@ -36,10 +35,9 @@ import org.w3c.dom.Text;
     public void Restart()
     {
         Intent restart = new Intent(this, StartRoundScreen.class);
-        restart.putExtra();
+        startActivity(restart);
     }
 
 
 
 }
-*/
