@@ -36,10 +36,10 @@ public class InGameActivity extends Activity {
 
         Intent intent = getIntent();
 
-        sw_time = intent.getIntExtra(TitleScreenActivity.SW_TIME, 1.0);
-        lw_time = intent.getIntExtra(TitleScreenActivity.LW_TIME, 1.0);
-        sw_word = intent.getStringExtra(TitleScreenActivity.SW_WORD, "");
-        lw_word = intent.getStringExtra(TitleScreenActivity.LW_WORD, "");
+        sw_time = intent.getDoubleExtra(TitleScreenActivity.SW_TIME, 1.0);
+        lw_time = intent.getDoubleExtra(TitleScreenActivity.LW_TIME, 1.0);
+        sw_word = intent.getStringExtra(TitleScreenActivity.SW_WORD);
+        lw_word = intent.getStringExtra(TitleScreenActivity.LW_WORD);
         sw_team = intent.getIntExtra(TitleScreenActivity.SW_TEAM, 1);
         lw_team = intent.getIntExtra(TitleScreenActivity.LW_TEAM, 1);
         hsr_score = intent.getIntExtra(TitleScreenActivity.HSR_SCORE, 1);
@@ -77,7 +77,7 @@ public class InGameActivity extends Activity {
 
         startTime = (System.currentTimeMillis() / 1000.0);
 
-        new CountDownTimer(62000,1000)
+        new CountDownTimer(620,1000)
         {
             public void onTick(long millisUntilFinished)
             {
@@ -97,6 +97,18 @@ public class InGameActivity extends Activity {
             Intent doneData = new Intent(this, WinnerScreenActivity.class);
             doneData.putExtra(TitleScreenActivity.T1_SCORE, score1);
             doneData.putExtra(TitleScreenActivity.T2_SCORE, score2);
+
+            doneData.putExtra(TitleScreenActivity.SW_WORD,sw_word );
+            doneData.putExtra(TitleScreenActivity.LW_WORD, lw_word);
+            doneData.putExtra(TitleScreenActivity.SW_TEAM,sw_team);
+            doneData.putExtra(TitleScreenActivity.LW_TEAM,lw_team);
+            doneData.putExtra(TitleScreenActivity.HSR_TEAM, hsr_team);
+            doneData.putExtra(TitleScreenActivity.SW_TIME,sw_time);
+            doneData.putExtra(TitleScreenActivity.LW_TIME, lw_time);
+            doneData.putExtra(TitleScreenActivity.HSR_SCORE, hsr_score);
+            doneData.putExtra(TitleScreenActivity.HSR_ROUND, hsr_round);
+
+
             startActivity(doneData);
         }
         else {
