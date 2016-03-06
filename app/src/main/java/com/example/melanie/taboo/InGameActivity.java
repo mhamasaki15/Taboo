@@ -79,7 +79,7 @@ public class InGameActivity extends Activity {
 
         startTime = (System.currentTimeMillis() / 1000.0);
 
-        new CountDownTimer((time*1000 + 1100), 1000)
+        new CountDownTimer((time + 1100), 1000)
         {
             public void onTick(long millisUntilFinished)
             {

@@ -3,16 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#05B198"
     tools:context="com.example.melanie.taboo.StatisticsActivity">
 
     <Spinner
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:id="@+id/spinner"
+        android:background="#FFC2185B"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -21,7 +19,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textAlignment="center"
-        android:text="Large Text"
+        android:text="Word Category"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
         android:id="@+id/part1"
         android:layout_below="@+id/spinner"
         android:layout_marginTop="54dp" />
@@ -30,9 +30,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text="Actual Word"
+        android:textColor="#FFF3CE41"
+        android:textStyle="bold"
         android:id="@+id/part2"
-        android:textSize="30dp"
+        android:textSize="50dp"
         android:textAlignment="center"
         android:layout_below="@id/part1" />
 
@@ -40,7 +42,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text="Team blah"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
         android:id="@+id/part3"
         android:textAlignment="center"
         android:layout_below="@id/part2" />
@@ -49,9 +53,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text="time"
+        android:textColor="#FFC2185B"
         android:id="@+id/part4"
-        android:textSize="30dp"
+        android:textSize="40dp"
         android:textAlignment="center"
         android:layout_below="@+id/part3"
         android:layout_centerHorizontal="true" />
