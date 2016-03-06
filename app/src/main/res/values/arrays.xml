@@ -6,134 +6,135 @@
         <item>20</item>
     </integer-array>
     <string-array name="mainWord">
-        <item>Basic1</item>
-        <item>Basic2</item>
-        <item>Basic3</item>
-        <item>Basic4</item>
-        <item>Basic5</item>
-        <item>Basic6</item>
-        <item>Basic7</item>
-        <item>Basic8</item>
-        <item>Basic9</item>
-        <item>Basic10</item>
-        <item>USC1</item>
-        <item>USC2</item>
-        <item>USC3</item>
-        <item>USC4</item>
-        <item>USC5</item>
-        <item>USC6</item>
-        <item>USC7</item>
-        <item>USC8</item>
-        <item>USC9</item>
-        <item>USC10</item>
-        <item>Pop1</item>
-        <item>Pop2</item>
-        <item>Pop3</item>
-        <item>Pop4</item>
-        <item>Pop5</item>
-        <item>Pop6</item>
-        <item>Pop7</item>
-        <item>Pop8</item>
+        <item>Refriderator</item>
+        <item>Kansas</item>
+        <item>iPhone</item>
+        <item>Scientology</item>
+        <item>gardener</item>
+        <item>trash can</item>
+        <item>candy cane</item>
+        <item>twins</item>
+        <item>holes</item>
+        <item>Microsoft Word</item>
+        <item>Office Chair</item>
+        <item>pyramid</item>
+        <item>muffin</item>
+        <item>swamp</item>
+        <item>up</item>
+        <item>Kentucky</item>
+        <item>Browser</item>
+        <item>Peach</item>
+        <item>amnesty</item>
+        <item>dupstep</item>
+        <item>Home Alone</item>
+        <item>doormat</item>
+        <item>Amazon</item>
+        <item>Silly Bandz</item>
+        <item>Swift</item>
+        <item>unicycle</item>
+        <item>outlet</item>
+        <item>queue</item>
+        <item>Wizard</item>
         <item>Pop9</item>
         <item>Pop10</item>
     </string-array>
 
     <string-array name="Taboo1">
-        <item>Basic1</item>
-        <item>Basic2</item>
-        <item>Basic3</item>
-        <item>Basic4</item>
-        <item>Basic5</item>
-        <item>Basic6</item>
-        <item>Basic7</item>
-        <item>Basic8</item>
-        <item>Basic9</item>
-        <item>Basic10</item>
-        <item>USC1</item>
-        <item>USC2</item>
-        <item>USC3</item>
-        <item>USC4</item>
-        <item>USC5</item>
-        <item>USC6</item>
-        <item>USC7</item>
-        <item>USC8</item>
-        <item>USC9</item>
-        <item>USC10</item>
-        <item>Pop1</item>
-        <item>Pop2</item>
-        <item>Pop3</item>
-        <item>Pop4</item>
-        <item>Pop5</item>
-        <item>Pop6</item>
-        <item>Pop7</item>
-        <item>Pop8</item>
-        <item>Pop9</item>
+        <item>cold</item>
+        <item>Wizard of Oz</item>
+        <item>Apple</item>
+        <item>cult</item>
+        <item>plants</item>
+        <item>garbage</item>
+        <item>Christmas</item>
+        <item>siblings</item>
+        <item>socks</item>
+        <item>software</item>
+        <item>desk</item>
+        <item>nutritional</item>
+        <item>blueberry</item>
+        <item>wetland</item>
+        <item>down</item>
+        <item>farm</item>
+        <item>chrome</item>
+        <item>fruit</item>
+        <item>pardon</item>
+        <item>wub</item>
+        <item>Christmas</item>
+        <item>welcome</item>
+        <item>prime</item>
+        <item>middle school</item>
+        <item>programming</item>
+        <item>bicycle</item>
+        <item>power</item>
+        <item>FIFO</item>
+        <item>Harry</item>
         <item>Pop10</item>
     </string-array>
 
     <string-array name="Taboo2">
-        <item>Basic1</item>
-        <item>Basic2</item>
-        <item>Basic3</item>
-        <item>Basic4</item>
-        <item>Basic5</item>
-        <item>Basic6</item>
-        <item>Basic7</item>
-        <item>Basic8</item>
-        <item>Basic9</item>
-        <item>Basic10</item>
-        <item>USC1</item>
-        <item>USC2</item>
-        <item>USC3</item>
-        <item>USC4</item>
-        <item>USC5</item>
-        <item>USC6</item>
-        <item>USC7</item>
-        <item>USC8</item>
-        <item>USC9</item>
-        <item>USC10</item>
-        <item>Pop1</item>
-        <item>Pop2</item>
-        <item>Pop3</item>
-        <item>Pop4</item>
-        <item>Pop5</item>
-        <item>Pop6</item>
-        <item>Pop7</item>
-        <item>Pop8</item>
-        <item>Pop9</item>
+        <item>freezer</item>
+        <item>Dorothy</item>
+        <item>iOS</item>
+        <item>Hollywood</item>
+        <item>water</item>
+        <item>throw away</item>
+        <item>mint</item>
+        <item>born</item>
+        <item>wall</item>
+        <item>Excel</item>
+        <item>legs</item>
+        <item>Egypt</item>
+        <item>cupcake</item>
+        <item>bog</item>
+        <item>pixar</item>
+        <item>state</item>
+        <item>Safari</item>
+        <item>princess</item>
+        <item>airport</item>
+        <item>base</item>
+        <item>movie</item>
+        <item>shoes</item>
+        <item>cardboard</item>
+        <item>fad</item>
+        <item>iOS</item>
+        <item>wheel</item>
+        <item>cord</item>
+        <item>LinkedList</item>
+        <item>30</item>
         <item>Pop10</item>
     </string-array>
 
     <string-array name="Taboo3">
-        <item>Basic1</item>
-        <item>Basic2</item>
-        <item>Basic3</item>
-        <item>Basic4</item>
-        <item>Basic5</item>
-        <item>Basic6</item>
-        <item>Basic7</item>
-        <item>Basic8</item>
-        <item>Basic9</item>
-        <item>Basic10</item>
-        <item>USC1</item>
-        <item>USC2</item>
-        <item>USC3</item>
-        <item>USC4</item>
-        <item>USC5</item>
-        <item>USC6</item>
-        <item>USC7</item>
-        <item>USC8</item>
-        <item>USC9</item>
-        <item>USC10</item>
-        <item>Pop1</item>
-        <item>Pop2</item>
-        <item>Pop3</item>
-        <item>Pop4</item>
-        <item>Pop5</item>
-        <item>Pop6</item>
-        <item>Pop7</item>
-        <item>Pop8</item>
-        <item>Pop9</item>
+        <item>leftovers</item>
+        <item>witch</item>
+        <item>Steve Jobs</item>
+        <item>lawyers</item>
+        <item>flowers</item>
+        <item>unwanted</item>
+        <item>stripes</item>
+        <item>identical</item>
+        <item>circle</item>
+        <item>type</item>
+        <item>work</item>
+        <item>mummies</item>
+        <item>sweet</item>
+        <item>MineCraft</item>
+        <item>Direction</item>
+        <item>Ohio</item>
+        <item>Website</item>
+        <item>Cobbler</item>
+        <item>Government</item>
+        <item>beat</item>
+        <item>New York</item>
+        <item>step</item>
+        <item>shipping</item>
+        <item>rubber</item>
+        <item>development</item>
+        <item>clown</item>
+        <item>electricity</item>
+        <item>British</item>
+        <item>Hagrid</item>
         <item>Pop10</item>
     </string-array>
 
