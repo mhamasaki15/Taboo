@@ -3,6 +3,7 @@ package com.example.melanie.taboo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -41,7 +42,7 @@ public class WinnerScreenActivity extends Activity {
 
     }
 
-    public void Restart()
+    public void Restart(View view)
     {
         Intent restart = new Intent(this, StartRoundScreen.class);
         int rounds = 6;
